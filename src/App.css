@@ -36,3 +36,95 @@
     transform: rotate(360deg);
   }
 }
+.navbar{
+  border-top: 1px solid rgba(144, 142, 142, 0.7);
+  box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
+  background-color: #4F83CC;
+  padding-right: 88px;
+  padding-left: 88px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-top: 24px;
+  width: 1560px;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  border-radius: 24px;
+  justify-content: space-between;
+}
+.nav-container{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 107px;
+  justify-content: center;
+}
+.btn-1{
+  width: 178px;
+  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 25px;
+  outline: none;
+  border:none;
+  font-family: Ubuntu;
+  display: flex;
+  justify-content: center;
+  margin-right: 30px;
+  align-items: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  color: #1D2951;
+  line-height: normal;
+}
+.logo-buttons{
+  display: flex;
+  align-items: center;
+
+}
+#ather-logo{
+  height: 20px;
+  width: 158px;
+  margin-right: 30px;
+}
+.nav-links{
+  display: flex;
+  /*background-color: green;*/
+  color: white;
+  font-family: Ubuntu;
+  list-style-type: none;
+  text-decoration: none;
+  justify-content: space-around;
+  font-size: 20px;
+  font-weight: 400;
+  align-items: center;
+  padding: 0;
+}
+li{
+  margin-right: 30px;
+}
+#ham{
+  height: 24px;
+  width: 24px;
+}
+#india{
+  height: 16px;
+  width: 16px;
+}
+.type2{
+  background-color: white;
+  height: 30px;
+  width: 168px;
+  display: flex;
+
+}
+
+#dropdown{
+  margin-left: 5px ;
+}
+.textspace{
+  margin-right: 5px;
+}
