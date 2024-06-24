@@ -14,6 +14,7 @@ import Overlay2 from "./Components/Overlay2";
 import Footer from "./Components/Footer";
 import FAQ from "./Components/FAQ";
 import Navbar from "./Components/Navbar";
+import Animation1 from "./Animations/Animation1";
 function App() {
 
 
@@ -41,6 +42,7 @@ function App() {
                 <Example/>
             </div>
             <FAQ/>
+          <Animation1/>
             <Footer/>
 
         </>
