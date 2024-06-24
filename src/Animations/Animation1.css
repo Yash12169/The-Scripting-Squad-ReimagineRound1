@@ -1,0 +1,26 @@
+#animation1{
+  height: 200vh;
+  background-color: rgb(127, 146, 246);
+  position: relative;
+  top: 1rem;
+}
+.box{
+  height: 100vh;
+  background-color: rgb(203, 50, 50);
+  transition: width linear 0.2s;
+  border: 1px solid transparent;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.main{
+  width: 100%;
+}
+#paragraph{
+   font-size: 3rem;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   font-weight: 900;
+   color: white;
+}
