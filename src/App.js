@@ -6,8 +6,8 @@ import ImageCards from "./Components/ImageCards";
 function App() {
   return (
   <>
-    <Navbar/>
-    <ImageCards/>
+     <Navbar/>
+     <ImageCards/> 
   </>
   );
 }
