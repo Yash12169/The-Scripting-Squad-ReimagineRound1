@@ -1,0 +1,119 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+.image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0.5);
+    transform-origin: center; /* Center the origin for scaling */
+    transition: transform 0.5s ease;
+}
+
+.image-container.zoomed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.image-container.zoomed .image {
+    transform: scale(1);
+}
+
+.text {
+    font-size: 150px;
+    font-weight: bold;
+    /*background-color: palegreen;*/
+    text-align: center;
+    margin-top: 280px;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 20px;
+    background-color: #ddd;
+    margin-top: 20px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #4caf50;
+}
+
+.percentage {
+    margin-top: 10px;
+    font-size: 120px;
+    /*background-color: green;*/
+    margin-top: auto;
+    margin-bottom: 100px;
+    margin-left:100px;
+    width: 90%;
+    color: white;
+}
+.merriweather-regular-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.libre-baskerville-regular {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.libre-baskerville-regular-italic {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+.lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+}
+.punch{
+    font-size: 30px;
+    text-align: center;
+    transition: opacity 1s ease;
+    opacity: 1;
+}
+.punch.fade-in{
+    opacity: 1;
+}
+.blink_me {
+    animation: blinker 4000ms linear infinite;
+}
+
+@keyframes blinker {
+
+    50% {
+        opacity: 0;
+    }
+
+}

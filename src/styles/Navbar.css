@@ -1,0 +1,102 @@
+.navbar {
+    border-top: 1px solid rgba(144, 142, 142, 0.7);
+    box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
+    background: radial-gradient(102.44% 136.73% at 6.63% -2.39%, #EBF3F5 0%, #C5E2F0 54.71%);
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height:86px;
+    justify-content: space-between;
+    position: fixed;
+    /*z-index: 100;*/
+}
+
+
+
+.nav-container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 86px;
+    justify-content: center;
+}
+
+.btn-1 {
+    width: 178px;
+    height: 50px;
+   padding: 5px 10px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    color:white;
+    background-color: #2C3E50;
+
+}
+
+.logo-buttons {
+    display: flex;
+    margin-left: 150px;
+    align-items: center;
+    gap: 30px;
+    /*background-color: green;*/
+    height: 100%;
+}
+
+#ather-logo {
+    height: 20px;
+    width: 158px;
+}
+
+.nav-links {
+    display: flex;
+    color: #34495E;
+    list-style-type: none;
+    text-decoration: none;
+    justify-content: space-around;
+    font-size: 20px;
+    font-weight: 400;
+    align-items: center;
+    padding: 0;
+    /*background-color: green;*/
+    width: fit-content;
+    gap: 30px;
+    margin-right: 150px;
+}
+
+li {
+    /*margin-right: 30px;*/
+    cursor: pointer;
+}
+
+#ham {
+    height: 24px;
+    width: 24px;
+}
+
+#india {
+    height: 16px;
+    width: 16px;
+}
+
+.type2 {
+    background-color: #2C3E50;
+    width: 168px;
+    display: flex;
+}
+
+#dropdown {
+    margin-left: 5px;
+}
+
+

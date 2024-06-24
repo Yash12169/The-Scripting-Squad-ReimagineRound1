@@ -1,0 +1,41 @@
+.card-bg{
+    background: linear-gradient(180deg, #1D2951 -1.01%, #F0F0F0 98.99%);
+
+}
+.card-text{
+    border-bottom: 2px solid #333;
+    width: fit-content;
+    cursor: pointer;
+    margin: auto;
+    /*background-color: green;*/
+
+}
+.card-bg-color{
+    background-color: #1D2951;
+}
+.drop-shadow {
+    filter: drop-shadow(4px 4px 100px rgba(0, 0, 0, 0.25));
+}
+.montserrat-font {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.montserrat-font-reg {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+/*.slider-content{*/
+/*    margin-top: 100px;*/
+/*    cursor: pointer;*/
+/*    transition: margin-top 1.5s ease-in-out;*/
+/*}*/
+/*.slider-content.upward{*/
+/*    margin-top: 50px;*/
+/*}*/

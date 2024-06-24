@@ -1,0 +1,63 @@
+/*.video-container {*/
+/*    position: relative;*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    overflow: hidden;*/
+/*    !*margin-top: -500px*!*/
+/*}*/
+
+/*.video-background {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*    z-index: 0;*/
+/*}*/
+
+/*.content {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    z-index: 1;*/
+/*    color: #979797;*/
+/*    text-align: center;*/
+/*    padding: 20px;*/
+/*    animation: fadeIn 2s ease-out, fadeOut 2s 5s forwards;*/
+/*}*/
+
+/*.h1 {*/
+/*    font-size: 5rem;*/
+/*    animation: pulse 2s infinite;*/
+/*    opacity: 0;*/
+/*    animation: fadeIn 2s ease-out forwards, fadeOut 2s 4s forwards;*/
+/*}*/
+
+/*@media (max-width: 768px) {*/
+/*    .h1 {*/
+/*        font-size: 2rem;*/
+/*    }*/
+/*}*/
+
+/*.img-container {*/
+/*    perspective: 2200px; !* Adjust the perspective value as needed *!*/
+/*    position: fixed; !* Position the container as fixed *!*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.image {*/
+/*    max-width: none; !* Allow the image to exceed its natural width *!*/
+/*    max-height: none; !* Allow the image to exceed its natural height *!*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover; !* Maintain aspect ratio and fill the container *!*/
+/*}*/
