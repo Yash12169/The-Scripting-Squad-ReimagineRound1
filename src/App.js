@@ -15,6 +15,7 @@ import Footer from "./Components/Footer";
 import FAQ from "./Components/FAQ";
 import Navbar from "./Components/Navbar";
 import Animation1 from "./Animations/Animation1";
+import Slider from "./Components/Slider";
 function App() {
 
 
@@ -43,6 +44,7 @@ function App() {
             </div>
             <FAQ/>
           <Animation1/>
+            <Slider/>
             <Footer/>
 
         </>
