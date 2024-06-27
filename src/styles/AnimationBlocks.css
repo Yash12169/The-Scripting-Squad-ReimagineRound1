@@ -1,0 +1,93 @@
+/* AnimationBlocks.css */
+
+
+.animation-container section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+.animation-container .animation-hero-img,
+.animation-container .animation-about-img {
+    height: 200vh;
+}
+
+
+
+
+
+.animation-container .animation-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.animation-container .animation-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Saans TRIAL";
+    font-size: 12vw;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    color: #000;
+    opacity: 0.5;
+}
+
+.animation-blocks-container {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+}
+
+.animation-blocks-container.animation-top {
+    top: 0;
+}
+
+.animation-blocks-container.animation-bottom {
+    bottom: 0;
+}
+
+.animation-blocks-row {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+}
+
+.animation-block {
+    width: 100%;
+    height: 100%;
+    transition: opacity 100ms;
+}
+
+.animation-blocks-container.animation-top .animation-blocks-row .animation-block {
+    opacity: 1;
+}
+
+.animation-blocks-container.animation-bottom .animation-blocks-row .animation-block {
+    opacity: 0;
+}
+
+
+.animation-hero-img .animation-blocks-container.animation-bottom .animation-blocks-row .animation-block {
+    background: black;
+}
+
+.animation-about-img .animation-blocks-container.animation-top .animation-blocks-row .animation-block {
+    background: black;
+}
+
+
+
+.animation-about-img-bl .animation-blocks-container.animation-top .animation-blocks-row-bl .animation-block {
+    background: #1D2951;
+
+}
+.animation-about-img-bl .animation-blocks-container.animation-top .animation-blocks-row-bl .animation-block {
+    background: #1D2951;
+}

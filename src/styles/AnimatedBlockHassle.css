@@ -1,0 +1,75 @@
+.unique-animation-container section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.unique-animation-container .unique-animation-hero-img,
+.unique-animation-container .unique-animation-about-img {
+    height: 200vh;
+}
+
+.unique-animation-container .unique-animation-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.unique-animation-container .unique-animation-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Saans TRIAL";
+    font-size: 12vw;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    color: #000;
+    opacity: 0.5;
+}
+
+.unique-animation-blocks-container {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+}
+
+.unique-animation-blocks-container.unique-animation-top {
+    top: 0;
+}
+
+.unique-animation-blocks-container.unique-animation-bottom {
+    bottom: 0;
+}
+
+.unique-animation-blocks-row {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+}
+
+.unique-animation-block {
+    width: 100%;
+    height: 100%;
+    transition: opacity 100ms;
+}
+
+.unique-animation-blocks-container.unique-animation-top .unique-animation-blocks-row .unique-animation-block {
+    opacity: 1;
+}
+
+.unique-animation-blocks-container.unique-animation-bottom .unique-animation-blocks-row .unique-animation-block {
+    opacity: 0;
+}
+
+.unique-animation-hero-img .unique-animation-blocks-container.unique-animation-bottom .unique-animation-blocks-row .unique-animation-block {
+    background: #1D2951;
+}
+
+.unique-animation-about-img .unique-animation-blocks-container.unique-animation-top .unique-animation-blocks-row .unique-animation-block {
+    background: #1D2951;
+}
+

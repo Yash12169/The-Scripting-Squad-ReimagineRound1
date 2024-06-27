@@ -67,3 +67,7 @@
 .faq-close-img.rotate{
     transform: rotate(45deg);
 }
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}

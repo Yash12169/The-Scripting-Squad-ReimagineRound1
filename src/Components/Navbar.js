@@ -1,39 +1,39 @@
-import React, { useEffect, useRef, useState } from 'react';
-import ather_logo from '../assets/ather_logo_nav.png';
-import india from '../assets/india.png';
-import dropdown from '../assets/dropdown.png';
-import hamburger_menu from '../assets/hamburger_menu.png';
-import '../styles/Navbar.css'
-function Navbar() {
+    import React, { useEffect, useRef, useState } from 'react';
+    import ather_logo from '../assets/ather_logo_nav.png';
+    import india from '../assets/india.png';
+    import dropdown from '../assets/dropdown.png';
+    import hamburger_menu from '../assets/hamburger_menu.png';
+    import '../styles/Navbar.css'
+    function Navbar() {
 
 
 
-    return (
-            <div className="navbar" >
-                <div className="logo-buttons poppins-regular">
-                    <img id="ather-logo" src={ather_logo} alt="Ather Logo" />
-                    <button className={'btn-1' }>Rizta</button>
-                    <div className={"btn-1 type2 cursor-pointer"}>
-                        <p className="textspace">450</p>
-                        <p className="textspace">Series</p>
-                        <img id="dropdown" src={dropdown} alt="Dropdown Icon" />
+        return (
+                <div className="navbar z-[1000]" >
+                    <div className="logo-buttons poppins-regular">
+                        <img id="ather-logo" src={ather_logo} alt="Ather Logo" />
+                        <button className={'btn-1' }>Rizta</button>
+                        <div className={"btn-1 type2 cursor-pointer"}>
+                            <p className="textspace">450</p>
+                            <p className="textspace">Series</p>
+                            <img id="dropdown" src={dropdown} alt="Dropdown Icon" />
+                        </div>
                     </div>
+
+                    <ul className="nav-links poppins-regular">
+                        <li className={'nav-utils'}>Charging</li>
+                        <li>Smart Helmets</li>
+                        <li>Shop</li>
+                        <li>Locate Us</li>
+                        <li>
+                            <img id="india" src={india} alt="India Flag" />
+                        </li>
+                        <li>
+                            <img id="ham" src={hamburger_menu} alt="Hamburger Menu" />
+                        </li>
+                    </ul>
                 </div>
+        );
+    }
 
-                <ul className="nav-links poppins-regular">
-                    <li className={'nav-utils'}>Charging</li>
-                    <li>Smart Helmets</li>
-                    <li>Shop</li>
-                    <li>Locate Us</li>
-                    <li>
-                        <img id="india" src={india} alt="India Flag" />
-                    </li>
-                    <li>
-                        <img id="ham" src={hamburger_menu} alt="Hamburger Menu" />
-                    </li>
-                </ul>
-            </div>
-    );
-}
-
-export default Navbar;
+    export default Navbar;

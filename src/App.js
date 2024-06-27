@@ -16,38 +16,91 @@ import FAQ from "./Components/FAQ";
 import Navbar from "./Components/Navbar";
 import Animation1 from "./Animations/Animation1";
 import Slider from "./Components/Slider";
+import SlideShow from "./Components/SlideShow";
+import {Carousel} from "react-responsive-carousel";
+
+import Cards2 from "./Components/Cards2";
+import OverlayOrig from "./Components/OverlayOrig";
+import AnimationBlocks from "./Components/AnimationBlocks";
+import AtherSpace from "./Components/AtherSpace";
+import ImageSlides from "./Components/ImageSlides";
+
+import TopUp from "./Components/TopUp";
+import AnimatedText from "./Components/AnimatedText";
+import MoreThrills from "./Components/MoreThrills";
+import CardComponent from "./Components/CardComponent";
+import AnimationBlocksHassle from "./Components/AnimationBlocksHassle";
+import IndiaLargest from "./Components/IndiaLargest";
 function App() {
 
-
+    const text = "MOTION";
 
     const [showLoading, setShowLoading] = useState(true);
+    const [showNav,setShowNav] = useState(false)
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowLoading(false);
-        }, 5000);
+        }, 3000);
 
         return () => clearTimeout(timer);
     }, []);
     return (
-
         <>
-            {/*<Overlay/>*/}
-            {/*<LoadingScreen/>*/}
-            <Overlay2/>
-            {/*<Navbar/>*/}
-           {/*/!*<div className={'mt-[3000px]'}>*!/*/}
-           {/*    <Example/>*/}
-           {/*/!*</div>*!/*/}
-            <div className={'mt-[-1000px]'}>
-                <Example/>
+            <OverlayOrig/>
+            <div className={'mt-[1000px]'}>
+                <AnimationBlocks/>
             </div>
-            <FAQ/>
-          <Animation1/>
-            <Slider/>
-            <Footer/>
+            <div className={'mt-[-1700px]'}>
+                <CardComponent/>
+            </div>
+            <div className={'mt-[-700px] mb-[400px]'}>
+                <IndiaLargest/>
+            </div>
+            <Overlay2/>
+            <div className={'mt-[-900px]'}>
+                <SlideShow/>
+            </div>
+
+            <div className={'mt-[-800px]'}>
+                <AtherSpace/>
+            </div>
+            <div className={'mt-[-1300px]'}>
+                <AnimationBlocksHassle/>
+            </div>
+
+           <div className={'mt-[-1000px]'}>
+               <TopUp/>
+               <FAQ/>
+               <Footer/>
+           </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         </>
+
+
 
 
     );

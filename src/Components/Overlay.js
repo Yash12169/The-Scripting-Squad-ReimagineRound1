@@ -10,12 +10,12 @@ import ather from "../assets/Ather.svg"
 
 gsap.registerPlugin(ScrollTrigger);
 
-function Overlay() {
+function Overlay({ setShowNav }) {
     const [percentage, setPercentage] = useState(0);
     const [message, setMessage] = useState('');
     const [showPercentage, setShowPercentage] = useState(true);
     const [showTextReveal, setShowTextReveal] = useState(false);
-    const [showMask,setShowMask] = useState(false);
+    const [showMask, setShowMask] = useState(false);
     const bg1 = useRef(null);
     const img_container = useRef(null);
     const img = useRef(null);
@@ -32,6 +32,7 @@ function Overlay() {
 
         return () => clearTimeout(timer);
     }, []);
+
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowMask(true);
@@ -83,12 +84,22 @@ function Overlay() {
 
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
+            let showNavTimeout;
+
             ScrollTrigger.create({
                 trigger: bg1.current,
                 pin: true,
-                pinSpacing: true,
+                pinSpacing: false,  // Changed to false
                 start: 'top top',
-                end: '+=200%',
+                end: '+=300%',  // Increased from 200% to 300%
+            });
+
+            ScrollTrigger.create({  // New ScrollTrigger for img_container
+                trigger: img_container.current,
+                pin: true,
+                pinSpacing: false,
+                start: 'top top',
+                end: '+=400%',
             });
 
             gsap.timeline({
@@ -97,12 +108,19 @@ function Overlay() {
                     pin: true,
                     scrub: 1,
                     start: 'top top',
-                    end: '+=200%',
+                    end: '+=300%',  // Increased from 200% to 300%
+                    onUpdate: (self) => {
+                        if (self.progress > 0.95 && !showNavTimeout) {
+                            showNavTimeout = setTimeout(() => {
+                                setShowNav(true);
+                            }, 2000);
+                        }
+                    },
                 },
             })
-                .to(img.current, { scale: 1.2 }, 0)
+                .to(img.current, { scale: 1.5 }, 0)  // Increased from 1.2 to 1.5
                 .to(mask.current, { scale: 10 }, 0)
-                .to(text1.current, { y: 40000 },0.05, '<') // Changed this line
+                .to(text1.current, { y: 40000 }, 0.05, '<')
                 .to(text2.current, { y: -80000 }, 0.08, '<')
                 .to(atherLogo.current, { y: -800 }, 0.05, '<')
                 .fromTo(container.current, { yPercent: 100, scaleY: 2 }, { yPercent: 0, scaleY: 1 });
@@ -110,32 +128,35 @@ function Overlay() {
 
         return () => ctx.revert();
     }, []);
+
     return (
-        <div ref={bg1}  className="relative">
+        <div ref={bg1} className="relative">
             <div className="bg absolute h-screen w-screen z-10"></div>
             <section>
                 <div
                     ref={img_container}
                     className="img-container perspective flex items-center justify-center h-screen w-screen z-20"
                 >
-                    <video autoPlay loop muted className="image" ref={img}>
+                    <video autoPlay loop muted className="image absolute z-50" ref={img}>
                         <source src={vid} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
 
-                    <img ref={mask} className="mask absolute" src={maskImg} alt="Mask"/>
+                    <img ref={mask} className="mask absolute" src={maskImg} alt="Mask" />
                     {/*{showMask===false && (<img ref={mask} className="mask absolute" src={mask2} alt="Mask"/>)}*/}
                     <div className="absolute flex text-white flex-col items-center justify-center z-30">
                         <h1 ref={text2} className="text-[100px]">
                             {/*<span className="text-white mb-[200px]">Ather.</span>*/}
-                            {/*<img  ref={atherLogo} src={ather}/>*/}
+                            {/*<img ref={atherLogo} src={ather} />*/}
                         </h1>
                         <div ref={text1} className={`mt-[400px] textTrain ${showTextReveal ? 'visible' : ''}`}>
                             <TextTrain />
                         </div>
                         {showPercentage && (
-                            <p ref={text2}
-                               className={'text-[120px] mt-[150px] mr-[1500px] montserrat-font'}>
+                            <p
+                                ref={text2}
+                                className={'text-[120px] mt-[150px] mr-[1500px] montserrat-font'}
+                            >
                                 {percentage}%
                             </p>
                         )}

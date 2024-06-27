@@ -20,6 +20,8 @@ code {
 }
 body {
   overflow-x: hidden;
+  /*height: 5000px;*/
+  background: radial-gradient(102.44% 136.73% at 6.63% -2.39%, #EBF3F5 0%, #C5E2F0 54.71%);
 }
 @layer components {
   .image {
@@ -41,7 +43,4 @@ body {
   .perspective {
     perspective: 2200px;
   }
-}
-body.no-scroll {
-  overflow: hidden;
 }

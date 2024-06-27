@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import vid from '../assets/video2.mp4';
 import mask3 from "../assets/mask3.png";
 import Example from "./SliderUtils";
+import SlideShow from "./SlideShow";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,8 +71,8 @@ function Overlay2() {
                     className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
                 />
             </div>
-            {/*<div className="bg-[#1a2b49] text-white h-screen flex flex-col i tems-center justify-center">*/}
-            {/*    <Example/>*/}
+            {/*<div className="bg-[#1a2b49] text-white h-screen flex flex-col items-center justify-center">*/}
+            {/*    <SlideShow/>*/}
             {/*</div>*/}
         </div>
     );

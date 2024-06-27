@@ -9,7 +9,7 @@ import community from '../assets/community.svg'
 import wrench from '../assets/wrench.svg'
 import TextReveal from "./TextReveal";
 
-const Example = () => {
+const SliderUtils = () => {
     return (
         <div className="bg-neutral-800">
 
@@ -48,7 +48,7 @@ const HorizontalScrollCarousel = () => {
         };
     }, []);
 
-    const backgroundColor = isInView ? "#1D2951" : "white";
+    const backgroundColor = isInView ? "#1D2951" : "#1D2951";
 
     return (
         <section
@@ -178,4 +178,4 @@ const cards = [
 
 ];
 
-export default Example;
+export default SliderUtils;

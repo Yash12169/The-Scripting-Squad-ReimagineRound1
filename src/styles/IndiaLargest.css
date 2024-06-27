@@ -1,0 +1,58 @@
+
+.il-content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    /*background: green;*/
+}
+.il-left{
+    display: flex;
+    flex-direction: column;
+    /*background: orange;*/
+    margin-left: 90px;
+    margin-top:70px;
+}
+.il-head{
+    color:  #F8F8FF;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.il-des{
+    color:  #008C00;
+    width: 100%;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 50px;
+}
+.il-ul{
+    display: flex;
+    gap: 10px;
+    color:#F8F8FF;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    align-items: center;
+    border-bottom: 2px solid #F8F8FF;
+    width: fit-content;
+    margin-top: 30px;
+}
+.il-right{
+    /*background: orange;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right:150px;
+    margin-bottom: 80px;
+    color: #F8F8FF;
+
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
