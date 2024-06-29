@@ -7,7 +7,11 @@ import img3 from '../assets/source_img3.png';
 import img4 from '../assets/source_img4.png';
 import img5 from '../assets/source_img5.png';
 import mask3 from "../assets/mask4.png";
-
+import '../styles/SlideShow.css'
+import TextReveal from "./TextReveal";
+import bar from '../assets/bar.png'
+import dull_bar from "../assets/dull_bar.png"
+import downarrow from '../assets/down_arrow.svg'
 gsap.registerPlugin(ScrollTrigger);
 
 function SlideShow() {
@@ -15,6 +19,44 @@ function SlideShow() {
     const imageContainerRef = useRef(null);
     const imageRefs = useRef([]);
     const maskRef = useRef(null);
+
+    const slides = [
+        {
+            index:0,
+            img: img1,
+            text: "Advanced Digital Dashboard",
+            description:"Stay informed with real-time data on speed, battery status, and more.",
+            model: "Ather Rizta",
+        },
+        {
+            index:1,
+            img: img2,
+            text: "Efficient Charging Solutions",
+            description: "Quick and convenient charging for uninterrupted journeys. Experience the power of advanced electric mobility.",
+            model: "Ather 450S"
+        },
+        {
+            index:2,
+            img: img3,
+            text: "Spacious Storage",
+            description: "Designed to carry all your essentials with ease. Enjoy the convenience of a large trunk space for your daily needs.",
+            model: "Model 3"
+        },
+        {
+            index:3,
+            img: img4,
+            text: "Multiple Riding Modes",
+            description: "Switch effortlessly between different riding modes to suit your journey. Experience ultimate control and adaptability.",
+            model: "Ahter 450X"
+        },
+        {
+            index:4,
+            img: img5,
+            text: "Enhanced Night Riding",
+            model: "Ather 450X",
+            description: "Experience safe and stylish rides even at night with advanced lighting features that illuminate your path.",
+        }
+    ];
 
     useLayoutEffect(() => {
         const container = containerRef.current;
@@ -90,21 +132,78 @@ function SlideShow() {
         <div ref={containerRef} className="relative">
             <div ref={imageContainerRef}
                  className="w-screen h-screen flex items-center justify-center overflow-hidden">
-                {[img1, img2, img3, img4, img5].map((img, index) => (
-                    <img
+                {slides.map((slide, index) => (
+                    <div
                         key={index}
                         ref={el => imageRefs.current[index] = el}
-                        src={img}
-                        alt={`Image ${index + 1}`}
-                        className="absolute top-0 left-0 w-full h-full object-cover"
-                    />
+                        className="absolute top-0 left-0 w-full h-full"
+                    >
+                        <img
+                            src={slide.img}
+                            alt={`Image ${index + 1}`}
+                            className="w-full h-full object-cover"
+                        />
+                        <div className={'slide-content'}>
+                           <div className={'slide-content-inner'}>
+                               <TextReveal delay={0.1}>
+                                   <div className="slide-text montserrat-font">
+                                       {slide.text}
+                                   </div>
+                               </TextReveal>
+
+                               <TextReveal delay={0.2}>
+                                   <div className="slide-des poppins-regular">
+                                       {slide.description}
+                                   </div>
+                               </TextReveal>
+                               <TextReveal delay={0.3}>
+                                   <div className="slide-model montserrat-reg">
+
+                                       <div className="custom-img-bn-btn">Explore Now !</div>
+                                       <div className="custom-img-lm-btn">View Specifications</div>
+
+                                   </div>
+                               </TextReveal>
+                           </div>
+
+                            <div>
+                                <TextReveal delay={0.4}>
+                                    <div className="slide-bottom poppins-regular">
+
+                                        <div className={'slide-object'}>
+                                            <p className={'slide-bottom-text'}>Dashboard</p>
+                                            {slide.index === 0 && (<img src={bar}/>)}
+                                            {slide.index !== 0 && (<img src={dull_bar}/>)}
+                                        </div>
+                                        <div className={'slide-object'}>
+                                            <p>Charging</p>
+                                            {slide.index === 1 && (<img src={bar}/>)}
+                                            {slide.index !== 1 && (<img src={dull_bar}/>)}
+                                        </div>
+                                        <div className={'slide-object'}>
+                                            <p className={'slide-bottom-text'}>Storage</p>
+                                            {slide.index === 2 && (<img src={bar}/>)}
+                                            {slide.index !== 2 && (<img src={dull_bar}/>)}
+                                        </div>
+                                        <div className={'slide-object'}>
+                                            <p>Modes</p>
+                                            {slide.index === 3 && (<img src={bar}/>)}
+                                            {slide.index !== 3 && (<img src={dull_bar}/>)}
+                                        </div>
+                                        <div className={'slide-object'}>
+                                            <p>Lighting</p>
+                                            {slide.index === 4 && (<img src={bar}/>)}
+                                            {slide.index !== 4 && (<img src={dull_bar}/>)}
+                                        </div>
+                                    </div>
+                                </TextReveal>
+                            </div>
+
+                        </div>
+
+                    </div>
                 ))}
-                {/*<img*/}
-                {/*    ref={maskRef}*/}
-                {/*    src={mask3}*/}
-                {/*    alt="Mask"*/}
-                {/*    className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"*/}
-                {/*/>*/}
+
             </div>
         </div>
     );

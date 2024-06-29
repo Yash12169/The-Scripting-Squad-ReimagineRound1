@@ -23,7 +23,7 @@ function Footer() {
                         <p>Locate Dealers</p>
                     </div>
                     <div className={'item'}>
-                        <span className={'head'}> Buy Eletric</span>
+                        <span className={'head'}> Buy Electric</span>
                         <p className={'mt-[10px]'}>Book Ather Scooter</p>
                         <p>EMI Calculator</p>
                         <p>Pricing</p>

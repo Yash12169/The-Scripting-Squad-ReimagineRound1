@@ -279,3 +279,33 @@
     background-color: #CD7F32;
     margin-top: 100px;
 }
+.more-thrills{
+    width: 100%;
+    height: fit-content;
+    /*background-color: green;*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.mt-txt{
+    width: 596px;
+    color:  #1D2951;
+    text-align: center;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.shadow-circle2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 335px;
+    height: 335px;
+    border-radius: 50%;
+    /*background-color: rgba(0, 128, 0, 0.29);*/
+    margin-top: -235px;
+    background: rgba(0, 7, 10, 0.30);
+    filter: blur(106.5px);
+}

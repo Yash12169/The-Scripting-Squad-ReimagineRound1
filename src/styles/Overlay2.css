@@ -1,0 +1,60 @@
+.overlay2-content{
+    position:absolute;
+    /*background: green;*/
+    top:130px;
+    left:196px;
+    /*height: 100%;*/
+
+}
+
+.overlay2-head{
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 42px;
+    line-height: normal;
+    background: linear-gradient(90deg, #1D2951 0%, #4D76FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.overlay2-des {
+    color: #484848;
+    font-size: 24px;
+    margin-bottom: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.overlay2-btn{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.overlay2-bottom{
+    margin-top: 450px;
+    color:#1D2951;
+    font-size: 20px ;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: 700px;
+    line-height: normal;
+    width: fit-content;
+    border-bottom: 3px solid #1D2951;
+}
+.custom-img-lm-btn-ovl {
+    color: #484848;
+    height: fit-content;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    border-bottom: 1px solid #484848;
+    cursor: pointer;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+}

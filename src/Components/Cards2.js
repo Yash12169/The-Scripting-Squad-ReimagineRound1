@@ -8,16 +8,29 @@ import {
 import '../styles/Cards.css'
 import rizta from '../assets/AtherRizta.png'
 import AnimatedText from "./AnimatedText";
+import TextReveal from "./TextReveal";
 const Cards2 = () => {
     const cards2= true;
     return (
         <div className={'primary-bg'}>
-
-            {/*<div className={'pickAther'}>*/}
-            {/*   <AnimatedText text={"Pick Your Ather"} cards2={cards2}/>*/}
-            {/*</div>*/}
+            <div className={'more-thrills'}>
+                <AnimatedText text={'More Thrills. Per Second.'} cards2={false}/>
+                <TextReveal delay={0.6}>
+                    <p className={'mt-txt poppins-regular'}>Presenting all-new electric scooters from Ather. Built to
+                        outperform both EV scooters and petrol scooters alike, with all the style, smarts and speed you
+                        need.</p>
+                </TextReveal>
+                <div className={'shadow-circle2'}>
+                    <p>----------</p>
+                </div>
+            </div>
+            <TextReveal delay={0.9}>
+                <div className={'pickAther'}>
+                    <AnimatedText text={"Pick Your Ather"} cards2={cards2}/>
+                </div>
+            </TextReveal>
             <div className="grid w-full place-content-center product-container px-4 py-12 text-slate-900">
-                <TiltCard/>
+            <TiltCard/>
             </div>
         </div>
 
