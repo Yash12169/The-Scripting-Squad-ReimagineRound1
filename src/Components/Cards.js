@@ -1,11 +1,10 @@
 import React, { useRef } from "react";
-import { motion, useMotionValue, useSpring, useTransform, useMotionTemplate } from "framer-motion";
+import { motion, useMotionValue, useSpring, useMotionTemplate } from "framer-motion";
 import '../styles/Cards.css';
 import apex from '../assets/AtherApex.png';
 import ather_s from '../assets/Ather450S.png';
 import ather_x from '../assets/AtherApex.png';
-import arrow from '../assets/Vector2.svg';
-import AnimatedText from "./AnimatedText";
+
 
 const cardData = [
     {

@@ -2,11 +2,6 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../styles/AnimationBlocks.css";
-import SliderUtils from "./SliderUtils";
-import FAQ from "./FAQ";
-import Footer from "./Footer";
-import AtherSpace from "./AtherSpace";
-import Overlay2 from "./Overlay2";
 import ImageSlides from "./ImageSlides";
 
 gsap.registerPlugin(ScrollTrigger);

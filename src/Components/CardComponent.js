@@ -1,10 +1,7 @@
 import React, { useEffect } from 'react';
 import '../styles/CardComponent.css';
 import { ScrollObserver, valueAtPercentage } from 'aatjs'; // Assuming you have aat.js as a package
-import img1 from '../assets/AtherRizta.png';
-import img2 from '../assets/Ather450S.png';
-import img3 from '../assets/Ather450X.png';
-import img4 from '../assets/AtherApex.png';
+
 import Cards2 from "./Cards2";
 import AnimatedText from "./AnimatedText";
 import Cards3 from "./Cards3";

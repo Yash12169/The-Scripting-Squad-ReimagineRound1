@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react';
+import React from 'react';
 import '../styles/AtherSpace.css'
 import arrow from '../assets/Vector.svg'
 import ather_space from '../assets/AtherSpace.png'

@@ -12,7 +12,6 @@ import IndiaLargest from "./Components/IndiaLargest";
 import AtherSpace from "./Components/AtherSpace";
 import AnimationBlocksHassle from "./Components/AnimationBlocksHassle";
 import TopUp from "./Components/TopUp";
-import ImageSlides from "./Components/ImageSlides";
 
 function App() {
     return (
