@@ -1,8 +1,9 @@
-.navbar {
+.navbar-trans {
     border-top: 1px solid rgba(144, 142, 142, 0.7);
     box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
-    background: radial-gradient(102.44% 136.73% at 6.63% -2.39%, #EBF3F5 0%, #C5E2F0 54.71%);
+    /*background: radial-gradient(102.44% 136.73% at 6.63% -2.39%, #EBF3F5 0%, #C5E2F0 54.71%);*/
     position: fixed;
+    background: transparent;
     top: 0;
     left: 0;
     width: 100%;

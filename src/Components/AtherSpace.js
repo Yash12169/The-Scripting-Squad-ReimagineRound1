@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 import '../styles/AtherSpace.css'
 import arrow from '../assets/Vector.svg'
 import ather_space from '../assets/AtherSpace.png'
-function AtherSpace() {
+
+const AtherSpace = () => {
     return (
         <div className={'as-parent'}>
 

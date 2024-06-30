@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-
+import '../styles/Cards.css'
 const AnimatedText = ({ text,cards2 }) => {
     const { ref, inView } = useInView({
         triggerOnce: true, // Trigger the animation only once
@@ -44,7 +44,7 @@ const AnimatedText = ({ text,cards2 }) => {
             style={{ display: 'flex', fontSize: '80pt', color: 'white', gap: '0.5em' }}
         >
             {words.map((word, index) => (
-                <motion.span key={index} variants={childVariants} style={{ display: 'inline-block' }} className={ cards2 ? 'pickAther montserrat-reg':'topup-start montserrat-reg'}>
+                <motion.span key={index} variants={childVariants} style={{ display: 'inline-block' }} className={ cards2 ? 'pickAther text-[75px] montserrat-thick':'topup-start montserrat-thick'}>
                     {word}
                 </motion.span>
             ))}

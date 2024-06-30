@@ -3,11 +3,11 @@ import ather_logo from '../assets/ather_logo_nav.png';
 import india from '../assets/india.png';
 import dropdown from '../assets/dropdown.png';
 import hamburger_menu from '../assets/hamburger_menu.png';
-import '../styles/Navbar.css';
+import '../styles/TransNavbar.css';
 
-function Navbar({ isVisible }) {
+function TransNavbar() {
     return (
-        <div className={`navbar z-[1000] ${isVisible ? 'visible' : 'hidden'}`}>
+        <div className={`navbar-trans z-[100]`}>
             <div className="navbar-content">
                 <div className="logo-buttons poppins-regular">
                     <img id="ather-logo" src={ather_logo} alt="Ather Logo" />
@@ -36,4 +36,4 @@ function Navbar({ isVisible }) {
     );
 }
 
-export default Navbar;
+export default TransNavbar;

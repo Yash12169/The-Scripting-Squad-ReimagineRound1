@@ -1,7 +1,7 @@
 .custom-container {
     position: relative;
     width: 100%;
-    height: 1500px;
+    height: 1400px;
     /*background: linear-gradient(180deg, #AFEEEE -1.01%, #C5E2F0 98.99%);*/
     background: black   ;
     /*background: #dfe1c8;*/
@@ -15,6 +15,7 @@
     overflow: hidden;
     perspective: 200px;
     perspective-origin: 50% 100%;
+    margin-top: 100px;
 }
 
 .custom-card {

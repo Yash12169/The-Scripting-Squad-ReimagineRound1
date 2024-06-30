@@ -120,11 +120,12 @@
     font-size: 18px;
     font-weight: 400;
     border-radius: 10px;
+    cursor: pointer;
     background:linear-gradient(90deg, #4F83CC 0%, #284266 100%);
 }
 .learn-btn-r{
     color: #1D2951;
-
+    cursor: pointer;
     font-size: 18px;
     border-bottom: 1px solid #1D2951;
     font-weight: 400;
@@ -232,7 +233,6 @@
     align-items: center;
     margin-top: 75px;
     margin-bottom: 50px;
-    /* H2-Sub-Heading */
     font-size: 75px;
     font-style: normal;
     font-weight: 700;
@@ -308,4 +308,10 @@
     margin-top: -235px;
     background: rgba(0, 7, 10, 0.30);
     filter: blur(106.5px);
+}
+.montserrat-thick {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }

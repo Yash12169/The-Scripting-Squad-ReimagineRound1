@@ -1,10 +1,11 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import React, {forwardRef, useLayoutEffect, useRef} from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import map from '../assets/map.png';
 import '../styles/IndiaLargest.css';
 import arrow from '../assets/Vector.svg'
 gsap.registerPlugin(ScrollTrigger);
+
 
 function IndiaLargest() {
     const containerRef = useRef(null);
@@ -90,6 +91,6 @@ function IndiaLargest() {
             </div>
         </div>
     );
-}
+};
 
 export default IndiaLargest;

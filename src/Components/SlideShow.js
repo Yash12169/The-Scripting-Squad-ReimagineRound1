@@ -129,7 +129,7 @@ function SlideShow() {
     }, []);
 
     return (
-        <div ref={containerRef} className="relative">
+        <div ref={containerRef} className="relative z-[300]">
             <div ref={imageContainerRef}
                  className="w-screen h-screen flex items-center justify-center overflow-hidden">
                 {slides.map((slide, index) => (
@@ -151,12 +151,12 @@ function SlideShow() {
                                    </div>
                                </TextReveal>
 
-                               <TextReveal delay={0.2}>
+                               <TextReveal delay={0.1}>
                                    <div className="slide-des poppins-regular">
                                        {slide.description}
                                    </div>
                                </TextReveal>
-                               <TextReveal delay={0.3}>
+                               <TextReveal delay={0.1}>
                                    <div className="slide-model montserrat-reg">
 
                                        <div className="custom-img-bn-btn">Explore Now !</div>
@@ -167,7 +167,7 @@ function SlideShow() {
                            </div>
 
                             <div>
-                                <TextReveal delay={0.4}>
+
                                     <div className="slide-bottom poppins-regular">
 
                                         <div className={'slide-object'}>
@@ -196,7 +196,7 @@ function SlideShow() {
                                             {slide.index !== 4 && (<img src={dull_bar}/>)}
                                         </div>
                                     </div>
-                                </TextReveal>
+
                             </div>
 
                         </div>

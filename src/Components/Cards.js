@@ -27,7 +27,7 @@ const cardData = [
     }
 ];
 
-const TopUp = () => {
+const Cards = () => {
     const titleRef = useRef(null);
     const x = useMotionValue(0);
     const y = useMotionValue(0);
@@ -61,7 +61,7 @@ const TopUp = () => {
             {/*</div>*/}
 
 
-            <div className="flex w-full justify-evenly gap-[50px] product-container px-4 py-12 text-slate-900">
+            <div className="flex w-full justify-center gap-[50px] product-container px-4 py-12 text-slate-900">
                 {cardData.map((card, index) => (
                     <TiltCard key={index} {...card} />
                 ))}
@@ -156,4 +156,4 @@ const TiltCard = ({ img, title, price, btnText }) => {
     );
 };
 
-export default TopUp;
+export default Cards;

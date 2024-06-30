@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import '../styles/Footer.css'
 import flag from '../assets/india.png'
 import ather_logo from '../assets/footer_logo.png'
@@ -7,10 +7,10 @@ import twitter from '../assets/TwitterX.png'
 import insta from '../assets/Instagram.png'
 import linkedin from '../assets/LinkedIn.png'
 import facebook from '../assets/Facebook.png'
-function Footer() {
-    return (
 
-        <div className={'footer-container poppins-regular'}>
+function Footer(){
+    return (
+        <div  className={'footer-container poppins-regular'}>
             <footer>
                 <div className={'footer-items'}>
                     <div id={'item1'} className={'item'}>
@@ -41,7 +41,6 @@ function Footer() {
                     </div>
                     <div className={'item'}>
                         <span className={'head poppins-regular'}>Partnership</span>
-
                         <p className={'mt-[10px]'}>Ather Corporate Program</p>
                         <p>Retail Partnership</p>
                         <p>Host Neighbourhood Charger</p>
@@ -53,7 +52,6 @@ function Footer() {
                         <p>Community</p>
                         <p>Press</p>
                         <p>Careers</p>
-
                     </div>
                     <div className={'item'}>
                         <span className={'head'}>Support</span>
@@ -88,10 +86,8 @@ function Footer() {
                         <p>Terms</p>
                         <img src={flag} className={'cursor-pointer'}/>
                     </div>
-
                 </div>
                 <div className={'footer-utils'}>
-
                     <div className={'flex gap-[25px]'}>
                         <div className={'util-item'}>
                             <p className={'textBold'}>Registered Office Address</p>
@@ -100,14 +96,12 @@ function Footer() {
                         <div className={'util-item'}>
                             <p>Tel No:+91-7676600900</p>
                             <p>Contact Person: Manager - Customer Services For Customer Support please write to :customercare@atherenergy.com</p>
-                            <p>Need more information or have a query? Feel free to Contact us.</p>
-
+                            <p>Need more information or have a query? Feel free to Contact us.</p>
                         </div>
                         <div className={'util-item'}>
                             <p>Corporate Identification Number (CIN)</p>
                             <p>U40100KA2013PTC093769</p>
                         </div>
-
                     </div>
                     <div className={'flex flex-col w-[150px] justify-between text-left '}>
                         <div className={'flex socials justify-end'}>
@@ -124,9 +118,7 @@ function Footer() {
                     </div>
                 </div>
             </footer>
-
         </div>
-
     );
 }
 
