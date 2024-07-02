@@ -1,0 +1,10 @@
+.slider-text-mobile{
+    font-size: 22px;
+    /*color:#F8F8FF;*/
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    width: 300px;
+    color: green;
+
+    font-weight: 600;
+}

@@ -1,0 +1,106 @@
+/*.card-bg-mobile {*/
+/*    background-color: green;*/
+/*}*/
+
+/*.card-text {*/
+/*    border-bottom: 2px solid #333;*/
+/*    width: fit-content;*/
+/*    cursor: pointer;*/
+/*    margin: auto;*/
+/*}*/
+
+/*.utils-mobile-text {*/
+/*    color: #A8D5BA;*/
+/*    font-size: 20px;*/
+/*    font-style: normal;*/
+/*    font-weight: 400;*/
+/*    line-height: normal;*/
+/*    margin-top: 40px;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.card-bg-color {*/
+/*    background-color: green;*/
+/*}*/
+
+/*.drop-shadow {*/
+/*    filter: drop-shadow(2px 2px 50px rgba(0, 0, 0, 0.25));*/
+/*}*/
+
+/*.montserrat-font {*/
+/*    font-family: "Montserrat", sans-serif;*/
+/*    font-optical-sizing: auto;*/
+/*    font-weight: 500;*/
+/*    font-style: normal;*/
+/*}*/
+
+/*.montserrat-font-reg {*/
+/*    font-family: "Montserrat", sans-serif;*/
+/*    font-optical-sizing: auto;*/
+/*    font-weight: 400;*/
+/*    font-style: normal;*/
+/*}*/
+
+/*!* Mobile-specific styles *!*/
+/*@media screen and (max-width: 767px) {*/
+/*    .card-bg-mobile {*/
+/*        width: 90%;*/
+/*        margin: 0 auto;*/
+/*    }*/
+
+/*    .utils-mobile-text {*/
+/*        font-size: 18px;*/
+/*        margin-top: 30px;*/
+/*    }*/
+
+/*    .Card {*/
+/*        height: auto;*/
+/*        width: 100%;*/
+/*        max-width: 262px;*/
+/*        margin: 0 auto;*/
+/*    }*/
+
+/*    .Card img {*/
+/*        max-width: 80%;*/
+/*        height: auto;*/
+/*    }*/
+
+/*    .Card .text-[25px] {*/
+/*    font-size: 20px;*/
+/*}*/
+
+/*    .Card .text-[18px] {*/
+/*    font-size: 16px;*/
+/*}*/
+
+/*    .HorizontalScrollCarousel {*/
+/*        height: auto;*/
+/*        padding: 20px 0;*/
+/*    }*/
+
+/*    .HorizontalScrollCarousel .sticky {*/
+/*        position: relative;*/
+/*        height: auto;*/
+/*    }*/
+
+/*    .HorizontalScrollCarousel .flex {*/
+/*        flex-direction: column;*/
+/*        align-items: center;*/
+/*    }*/
+/*}*/
+
+/*!* Tablet-specific styles *!*/
+/*@media screen and (min-width: 768px) and (max-width: 1023px) {*/
+/*    .utils-mobile-text {*/
+/*        font-size: 22px;*/
+/*    }*/
+
+/*    .Card {*/
+/*        width: 230px;*/
+/*    }*/
+
+/*    .HorizontalScrollCarousel .flex {*/
+/*        flex-wrap: wrap;*/
+/*        justify-content: center;*/
+/*    }*/
+/*}*/

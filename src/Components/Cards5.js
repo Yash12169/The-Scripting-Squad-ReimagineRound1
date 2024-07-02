@@ -6,9 +6,9 @@ import {
     useSpring,
 } from "framer-motion";
 import '../styles/Cards.css'
-import rizta from '../assets/Ather450X.png'
+import rizta from '../assets/AtherApex.png'
 
-const Cards3 = ({isNew}) => {
+const Cards5 = ({isNew}) => {
     return (
         <div className={'primary-bg'}>
 
@@ -67,24 +67,25 @@ const TiltCard = () => {
                 transformStyle: "preserve-3d",
                 transform,
             }}
-            className="relative h-[620px] w-[1600px] rounded-xl card-background"
+            className="relative h-[0px] w-[0px] rounded-xl card-background"
         >
             <div
                 style={{
                     transform: "translateZ(75px)",
                     transformStyle: "preserve-3d",
                 }}
-                className="absolute product-card-r w-[1530px] h-[551px] rounded-xl  shadow-lg"
+                className="absolute flex flex-col product-card-r w-[346px] h-[385px] rounded-xl  shadow-lg"
             >
-                <div className={'ml-[205px]'}>
-                    <div className={'product-btn-x poppins-regular'}>
-                        <p>. Classic .</p>
-                    </div>
+                <div>
+                    <img className={'h-[170px] w-[170px]'} src={rizta}/>
+                </div>
+
+                <div className={'bg-white'}>
                     <div className={'product-title-r montserrat-reg'}>
-                        <p>Ather 450X</p>
+                        <p>Ather 450 Apex</p>
                     </div>
                     <div className={'product-price-r montserrat-reg'}>
-                        <p>Starting at ₹ 1,40,599</p>
+                        <p>Starting at ₹ 1,94,999</p>
                     </div>
                     <div className={'product-btn-r poppins-regular'}>
                         <div className={'book-btn-r'}>
@@ -95,10 +96,11 @@ const TiltCard = () => {
                         </div>
                     </div>
                 </div>
-                <img  className={'mr-[205px] w-[440px] h-[459px] mt-[45px]'} src={rizta}/>
             </div>
+
+
         </motion.div>
     );
 };
 
-export default Cards3;
+export default Cards5;

@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import '../styles/LoadingScreen.css'
 function LoadingScreen() {
-    const [percentage, setPercentage] = useState(0);
-    const [isZoomed, setIsZoomed] = useState(false);
-    const [message,setMessage] = useState('');
+    // const [percentage, setPercentage] = useState(0);
+    // const [isZoomed, setIsZoomed] = useState(false);
+    // const [message,setMessage] = useState('');
     useEffect(() => {
         const timer = setInterval(() => {
             setPercentage((prevPercentage) => {

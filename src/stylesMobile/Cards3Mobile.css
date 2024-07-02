@@ -1,0 +1,80 @@
+.cards-mobile-parent{
+    width: 346px;
+    height: 385px;
+
+margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+}
+.cards-mobile-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 346px;
+    height: 260px;
+    flex-shrink: 0;
+    border-radius: 35px 35px 0px 0px;
+    background: linear-gradient(180deg, #C5E2F0 0%, #A3CDEB 100%);
+    box-shadow: 4px 4px 100px 30px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+.cards-mobile-content{
+    background-color: white;
+    height: 125px;
+    width: 346px;
+    border-radius: 0px 0px 35px 35px;
+    z-index: 0;
+}
+.cards-mobile-head{
+    color:#1D2951;
+    text-align: center;
+    margin-top: 18px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.cards-mobile-price{
+    margin-top: 5px;
+    color:  #1D2951;
+    text-align: center;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.cards-mobile-book{
+    height: 30px;
+    width: 93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:  #F8F8FF;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.00);
+    background: linear-gradient(90deg, #4F83CC 0%, #284266 100%);
+}
+.cards-mobile-learn{
+    color:  #1D2951;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    border-bottom: 1px solid black;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.cards-mobile-btncont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 18px;
+}

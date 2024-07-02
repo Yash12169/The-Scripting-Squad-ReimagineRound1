@@ -5,18 +5,18 @@ import {
     useMotionValue,
     useSpring,
 } from "framer-motion";
-import '../styles/Cards.css'
+import '../styles/Cards3.css'
 import rizta from '../assets/AtherApex.png'
 
 const Cards3 = ({isNew}) => {
     return (
-        <div className={'primary-bg'}>
 
 
-            <div className="grid w-full place-content-center product-container px-4 py-12 text-slate-900">
+
+            <div className="product-container-mobile">
                 <TiltCard/>
             </div>
-        </div>
+
 
     );
 };
@@ -67,19 +67,20 @@ const TiltCard = () => {
                 transformStyle: "preserve-3d",
                 transform,
             }}
-            className="relative h-[620px] w-[1600px] rounded-xl card-background"
+            className="relative h-[0px] w-[0px] rounded-xl card-background-mobile"
         >
             <div
                 style={{
                     transform: "translateZ(75px)",
                     transformStyle: "preserve-3d",
                 }}
-                className="absolute product-card-r w-[1530px] h-[551px] rounded-xl  shadow-lg"
+                className="absolute flex flex-col product-card-r w-[346px] h-[385px] rounded-xl  shadow-lg"
             >
-                <div className={'ml-[205px]'}>
-                    <div className={'product-btn-apex poppins-regular'}>
-                        <p>. Best Seller .</p>
+                    <div>
+                        <img className={'h-[170px] w-[170px]'} src={rizta}/>
                     </div>
+
+                <div className={'bg-white'}>
                     <div className={'product-title-r montserrat-reg'}>
                         <p>Ather 450 Apex</p>
                     </div>
@@ -95,8 +96,9 @@ const TiltCard = () => {
                         </div>
                     </div>
                 </div>
-                <img  className={'mr-[205px] w-[440px] h-[459px] mt-[45px]'} src={rizta}/>
             </div>
+
+
         </motion.div>
     );
 };

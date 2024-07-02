@@ -93,16 +93,19 @@
 .product-title-r{
     color: #1D2951;
 
-    /* H4-Sub-Section-Heading */
-    font-size: 30px;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
     font-weight: 400;
-    margin-top: 40px;
+    line-height: normal;
 }
 .product-price-r{
-    color:#1D2951;
-
-    font-size: 18px;
+    color:  #1D2951;
+    text-align: center;
+    font-size: 10px;
+    font-style: normal;
     font-weight: 400;
+    line-height: normal;
 }
 .product-btn-r{
     display: flex;
@@ -111,13 +114,13 @@
     margin-top: 40px;
 }
 .book-btn-r{
-    width: 220px;
-    height: 70px;
+    width: 93px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #F8F8FF;
-    font-size: 18px;
+    font-size: 8px;
     font-weight: 400;
     border-radius: 10px;
     cursor: pointer;
@@ -126,7 +129,7 @@
 .learn-btn-r{
     color: #1D2951;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 8px;
     border-bottom: 1px solid #1D2951;
     font-weight: 400;
     height: fit-content;

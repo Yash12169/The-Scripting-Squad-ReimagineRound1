@@ -1,0 +1,119 @@
+.overlay2-mobile-content {
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    width: 260px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.overlay2-mobile-head {
+    font-size: 35px;
+    margin-top: 60px;
+    font-style: normal;
+    margin-bottom: 30px;
+    font-weight: 700;
+    line-height: normal;
+    background: linear-gradient(90deg, #1D2951 0%, #4D76FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.overlay2-mobile-des {
+    color: #484848;
+    font-size: 12px;
+    margin-bottom: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.overlay2-mobile-btn {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.overlay2-mobile-bottom {
+    margin-top: 450px;
+    color: #1D2951;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: 700px;
+    line-height: normal;
+    width: fit-content;
+    border-bottom: 3px solid #1D2951;
+    cursor: pointer;
+}
+
+.custom-mobile-img-lm-btn-ovl {
+    color: #484848;
+    height: fit-content;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    border-bottom: 3px solid #484848;
+    cursor: pointer;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+}
+
+.montserrat-mobile-thick {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.custom-mobile-img-bn-btn-ovl {
+    display: inline-flex;
+    padding: 22px 60px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 35px;
+    background: linear-gradient(90deg, #4F83CC 0%, #284266 100%);
+    color: #F8F8FF;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: normal;
+}
+
+.montserrat-mobile-font {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.custom-mobile-bn{
+    width: 93px;
+    height: 30px;
+    color:#F8F8FF;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    border-radius: 10px;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #4F83CC 0%, #284266 100%);
+}
+.custom-mobile-lm{
+    color:#484848;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+    border-bottom: 1px solid #484848;
+    line-height: normal;
+}

@@ -1,0 +1,52 @@
+.il-mobile-container{
+    border-radius: 10px;
+    background: #4285F4;
+    box-shadow: 4px 4px 60px 25px rgba(0, 0, 0, 0.25);
+   width: 278px;
+    height: 371px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+margin: auto;
+    margin-top: 145px;
+}
+.il-mobile-content{
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.il-mobile-head{
+    color:  #F8F8FF;
+    text-align: center;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.il-mobile-des{
+    color: #FFF0C7;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.il-mobile-ul{
+    color: #F8F8FF;
+    font-size: 8px;
+    font-style: normal;
+    display: flex;
+    margin:auto;
+    gap: 6px;
+    align-items: center;
+    border-bottom: 1px solid white;
+    width: fit-content;
+    font-weight: 400;
+    line-height: normal;
+}
+.il-mobile-img{
+    margin-bottom: 18px;
+}

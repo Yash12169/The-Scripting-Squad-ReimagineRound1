@@ -6,9 +6,8 @@ import img1 from '../assets/MeetRizta.png';
 import img2 from '../assets/BikeScooters.png';
 import img3 from '../assets/Apex.png';
 import img4 from '../assets/yt.svg'
-import Cards2 from "./Cards2";
 
-import Slider from "./Slider";
+
 const ImageSlides = () => {
     const sliderRef = useRef(null);
     const cardsRef = useRef([]);

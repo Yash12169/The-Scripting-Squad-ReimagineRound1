@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import '../styles/Footer.css'
 import flag from '../assets/india.png'
 import ather_logo from '../assets/footer_logo.png'

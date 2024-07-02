@@ -7,6 +7,11 @@ import AnimatedText from "./AnimatedText";
 import Cards3 from "./Cards3";
 import Cards4 from "./Cards4";
 import Cards5 from "./Cards5";
+import CardsMobile from "../MobileComponent/CardsMobile";
+import CardsMobile1 from "../MobileComponent/CardsMobile1";
+import CardsMobile2 from "../MobileComponent/CardsMobile2";
+import CardsMobile3 from "../MobileComponent/CardsMobile3";
+import TextReveal from "./TextReveal";
 
 const CardComponent = () => {
     const cards2= true;
@@ -34,29 +39,49 @@ const CardComponent = () => {
 
     return (
         <>
-            <div className="space space--small"></div>
-            <div className={'pickAther'}>
-                <AnimatedText text={"Pick Your Ather"} cards2={cards2}/>
+            <div className={'more-thrills-container'} >
+                <TextReveal delay={0.1}>
+                    <div className={'more-thrills-mobile montserrat-reg'}>
+                        <p>More Thrills.</p>
+                        <p>Per Second.</p>
+                    </div>
+                    <div className={'shadow-mobile-circle'}>
+                        <p>---------</p>
+                    </div>
+                </TextReveal>
+                <TextReveal delay={0.2}>
+                    <div className={'more-thrills-para poppins-regular'}>
+                        <p>Presenting all-new electric scooters from Ather. Built to outperform both EV scooters and
+                            petrol
+                            scooters alike, with all the style, smarts and speed you need.</p>
+                    </div>
+                </TextReveal>
             </div>
+            <div className="space space--small"></div>
+            <TextReveal delay={0.3}>
+                <div className={'pickAther-mob'}>
+                    <p>Pick Your Ather</p>
+                </div>
+            </TextReveal>
             <div className="cards">
                 <div className="card" data-index="0">
-                    <div className="card__inner h-[620px] w-[1600px] rounded-xl card-background">
-                        <Cards2/>
+                <div className="card__inner  rounded-xl card-background">
+                        <CardsMobile/>
                     </div>
                 </div>
                 <div className="card" data-index="1">
-                    <div className="card__inner h-[620px] w-[1600px] rounded-xl card-background">
-                        <Cards3 isNew={false}/>
+                    <div className="card__inner rounded-xl card-background">
+                        <CardsMobile2/>
                     </div>
                 </div>
                 <div className="card" data-index="2">
-                    <div className="card__inner h-[620px] w-[1630px] rounded-xl card-background">
-                        <Cards4 isNew={false}/>
+                    <div className="card__inner rounded-xl card-background">
+                        <CardsMobile3/>
                     </div>
                 </div>
                 <div className="card" data-index="3">
-                    <div className="card__inner h-[620px] w-[1630px] rounded-xl card-background">
-                        <Cards5 isNew={false}/>
+                    <div className="card__inner  rounded-xl card-background">
+                        <CardsMobile1/>
                     </div>
                 </div>
             </div>

@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import TransNavbar from "./TransNavbar";
@@ -18,6 +19,36 @@ function Overlay3() {
     const maskRef = useRef(null);
     const navbarRef = useRef(null);
     const lastScrollTop = useRef(0);
+    const elementRef = useRef(null);
+    const [width,setWidth]= useState(0);
+
+
+
+
+    useEffect(() => {
+        const getElementWidth = () => {
+            if (elementRef.current) {
+                const currentWidth = elementRef.current.clientWidth; // or use offsetWidth for total width including padding and borders
+                setWidth(currentWidth);
+            }
+        };
+
+        // Call once when component mounts
+        getElementWidth();
+
+        // Call whenever window is resized
+        window.addEventListener('resize', getElementWidth);
+
+        // Cleanup listener on component unmount
+        return () => {
+            window.removeEventListener('resize', getElementWidth);
+        };
+    }, []);
+
+
+
+
+
 
     useEffect(() => {
         const mask = maskRef.current;
@@ -133,43 +164,49 @@ function Overlay3() {
     }, [allowScroll]);
 
     return (
-        <div>
+        <div ref={elementRef}>
             <div ref={navbarRef} style={{ opacity: 0, position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000 }}>
                 {showNavbar && <TransNavbar />}
             </div>
-            <div className="relative w-screen h-screen flex items-center justify-center overflow-hidden">
-                <div ref={videoContainerRef} className="w-full h-full flex items-center justify-center overflow-hidden">
-                    <video
-                        ref={videoRef}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="object-cover"
-                    >
-                        <source src={vid} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
 
-                    <img
-                        ref={maskRef}
-                        src={mask3}
-                        alt="Mask"
-                        className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
-                    />
-                    <div
-                        className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
-                        style={{
-                            opacity: showPercentage ? 1 : 0,
-                            transition: 'opacity 0.5s ease-out'
-                        }}
-                    >
-                        {showPercentage && (
-                            <p className={'absolute bottom-[100px] left-[100px] montserrat-font text-[100px]'} style={{  color: 'white' }}>{percentComplete}%</p>
-                        )}
+
+                <div className="relative w-screen h-screen flex items-center justify-center overflow-hidden">
+                    <div ref={videoContainerRef}
+                         className="w-full h-full flex items-center justify-center overflow-hidden">
+                        <video
+                            ref={videoRef}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="object-cover"
+                        >
+                            <source src={vid} type="video/mp4"/>
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <img
+                            ref={maskRef}
+                            src={mask3}
+                            alt="Mask"
+                            className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
+                        />
+                        <div
+                            className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
+                            style={{
+                                opacity: showPercentage ? 1 : 0,
+                                transition: 'opacity 0.5s ease-out'
+                            }}
+                        >
+                            {showPercentage && (
+                                <p className={'absolute bottom-[100px] left-[100px] montserrat-font text-[100px]'}
+                                   style={{color: 'white'}}>{percentComplete}%</p>
+                            )}
+                        </div>
                     </div>
                 </div>
-            </div>
+
+
         </div>
     );
 }

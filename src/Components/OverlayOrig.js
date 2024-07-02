@@ -4,7 +4,7 @@ import vid from '../assets/starting.mp4';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import TextTrain from "./TextTrain";
-import ather from "../assets/Ather.svg";
+
 import  '../App.css'
 gsap.registerPlugin(ScrollTrigger);
 

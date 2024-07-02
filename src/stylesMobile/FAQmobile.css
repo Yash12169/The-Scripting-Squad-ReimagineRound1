@@ -1,0 +1,139 @@
+.mobile-faq-container {
+    width: 90%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mobile-faq-head {
+    color: #22577A;
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+
+.montserrat-reg {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.mobile-faq-content {
+}
+
+.mobile-faq-question {
+    margin-top: 25px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 25px;
+    display: flex;
+    color: #1D2951;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(29, 41, 81, 0.40);
+    align-items: center;
+}
+
+.mobile-faq-question img {
+    width: 12px;
+    height: 12px;
+}
+
+.mobile-ques-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3px;
+    align-items: center;
+}
+
+.mobile-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-out;
+}
+
+.mobile-faq-answer.open {
+    max-height: 500px; /* Adjust as needed */
+    transition: max-height 1s ease-in;
+}
+
+.mobile-link-faq {
+    color: #008C00;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 16px;
+}
+
+.mobile-underline-faq {
+    border-bottom: 2px solid #008C00;
+    cursor: pointer;
+}
+
+.mobile-faq-para {
+    display: flex;
+    color: #2C3E50;
+    margin-left: 16px;
+    margin-right: 16px;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 8px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.mobile-caution-cont {
+    border-radius: 10px;
+    background: #1D2951;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    margin-top: 20px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.caution-text-mobile {
+    color: #F8F8FF;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.mobile-caution,
+.mobile-caution1 {
+    align-items: center;
+    height: fit-content;
+}
+
+.mobile-caution {
+    gap: 6px;
+    margin-left: 10px;
+}
+
+.mobile-caution1 {
+    border-bottom: 1px solid white;
+}
+
+.fraud-mobile{
+    margin-right: 10px;
+    color: #F8F8FF;
+    font-size: 6px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

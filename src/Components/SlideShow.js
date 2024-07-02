@@ -6,12 +6,11 @@ import img2 from '../assets/source_img2.png';
 import img3 from '../assets/source_img3.png';
 import img4 from '../assets/source_img4.png';
 import img5 from '../assets/source_img5.png';
-import mask3 from "../assets/mask4.png";
 import '../styles/SlideShow.css'
 import TextReveal from "./TextReveal";
 import bar from '../assets/bar.png'
 import dull_bar from "../assets/dull_bar.png"
-import downarrow from '../assets/down_arrow.svg'
+
 gsap.registerPlugin(ScrollTrigger);
 
 function SlideShow() {

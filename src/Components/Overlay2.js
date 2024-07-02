@@ -3,8 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import vid from '../assets/video2.mp4';
 import mask3 from "../assets/mask3.png";
-import Example from "./SliderUtils";
-import SlideShow from "./SlideShow";
+// import mask3 from "../assets/capsuleMask.png";
 import '../styles/Overlay2.css';
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,6 +25,7 @@ function Overlay2() {
 
         // Set initial video size
         gsap.set(video, { width: '960px', height: '515px' });
+        // gsap.set(video, { width: '100%', height: '100%' });
         gsap.set(text, { opacity: 0 }); // Initially hide the text
 
         const tl = gsap.timeline({

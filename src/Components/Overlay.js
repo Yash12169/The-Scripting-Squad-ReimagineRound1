@@ -1,12 +1,11 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import maskImg from '../assets/mask.png';
-import mask2 from '../assets/mask2.png';
 import vid from '../assets/starting.mp4';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import TextReveal from "./TextReveal";
+
 import TextTrain from "./TextTrain";
-import ather from "../assets/Ather.svg"
+
 
 gsap.registerPlugin(ScrollTrigger);
 
