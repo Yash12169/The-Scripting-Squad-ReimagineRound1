@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GLITCH LIQUID DISTORTION SLIDER</title>
+    <link rel="stylesheet" href="project.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<main>
+    <div class="slider">
+                    <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+        <nav>
+            <a href="#" class="main-nav prev bg-white" data-nav="previous">Prev <span></span></a>
+            <a href="#" class="main-nav next" data-nav="next">Next <span></span></a>
+        </nav>
+    </div>
+</main>
+
+<!-- TweenMax -->
+<script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js"></script>
+
+<!-- Pixi JS -->
+<script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi-filters.min.js"></script>
+
+<!-- Slider Plugin -->
+<script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/rgbKineticSlider.js"></script>
+
+<script>
+    const images = ["MeetRizta.png", "BikeScooters.png", "Apex.png"];
+    const texts = [
+        [""],
+        [""],
+        [""]
+    ];
+
+    rgbKineticSlider = new rgbKineticSlider({
+        slideImages: images,
+        itemsTitles: texts,
+
+        backgroundDisplacementSprite:
+            "http://hmongouachon.com/_demos/rgbKineticSlider/map-9.jpg",
+        cursorDisplacementSprite:
+            "http://hmongouachon.com/_demos/rgbKineticSlider/displace-circle.png",
+        cursorScaleIntensity: 0.6,
+        cursorMomentum: 0.14,
+
+        swipe: true,
+        swipeDistance: window.innerWidth * 0.4,
+        swipeScaleIntensity: 2,
+
+        slideTransitionDuration: 0.8,
+        transitionScaleIntensity: 30,
+        transitionScaleAmplitude: 160,
+
+        nav: true,
+        navElement: ".main-nav",
+
+        imagesRgbEffect: true,
+        imagesRgbIntensity: 4,
+        navImagesRgbIntensity: 120,
+
+        textsDisplay : true, // show title
+        textsSubTitleDisplay : true, // show subtitles
+        textsTiltEffect : true, // enable text tilt
+        googleFonts : ['Playfair Display:700', 'Roboto:400'], // select google font to use
+        buttonMode : true, // enable button mode for title
+        textsRgbEffect : true, // enable text rgb effect
+        textsRgbIntensity : 0.03, // set text rgb intensity
+        navTextsRgbIntensity : 15, // set text rgb intensity for regular nav
+
+        textTitleColor : 'white', // title color
+        textTitleSize :72, // title size
+        mobileTextTitleSize : 125, // title size
+        textTitleLetterspacing : 3, // title letterspacing
+
+        textSubTitleColor : 'white', // subtitle color ex : 0x000000
+        textSubTitleSize : 21, // subtitle size
+        mobileTextSubTitleSize : 21, // mobile subtitle size
+        textSubTitleLetterspacing : 2, // subtitle letter spacing
+        textSubTitleOffsetTop : 90, // subtitle offset top
+        mobileTextSubTitleOffsetTop : 90, // mobile subtitle offset top
+    });
+</script>
+</body>
+</html>

@@ -32,6 +32,7 @@ import OverlayCapsule from "./Components/OverlayCapsule";
 import SliderMobile from "./MobileComponent/SliderMobile";
 import SlideShowMobile from "./MobileComponent/SlideShowMobile";
 import HorizontalSliderMobile from "./MobileComponent/HorizontalSliderMobile";
+import StaticComponent from "./Components/StaticComponent";
 
 
 function App() {
@@ -63,39 +64,36 @@ function App() {
             {width > 480 && (
                 <div>
 
-                    <div className={'overflow-x-hidden'}>
-                        <Overlay3/>
-                    </div>
-                    <OverlayCapsule/>
-                    {/*<div className={'mt-[-1700px]'}>*/}
-                    {/*    <AnimationBlocks/>*/}
+                    {/*<div className={'overflow-x-hidden'}>*/}
+                    {/*    <Overlay3/>*/}
                     {/*</div>*/}
-                    <div>
-                        <Cards2/>
-                        <Cards/>
-                    </div>
+                    <StaticComponent/>
+                    {/*<div>*/}
+                    {/*    <Cards2/>*/}
+                    {/*    <Cards/>*/}
+                    {/*</div>*/}
 
-                    <Slider/>
-                    <div className={''}>
-                        <Overlay2/>
-                    </div>
-                    <div className={'mt-[-1000px]'}>
-                        <SlideShow/>
-                    </div>
-                    <div className={'mt-[-1000px] mb-[200px]'}>
-                        <IndiaLargest/>
-                    </div>
-                    <AtherSpace/>
-                    <div className={'mt-[-1200px]'}>
-                        <AnimationBlocksHassle/>
-                    </div>
-                    <div className={'mt-[-1200px]'}>
-                        <TopUp/>
-                        <FAQ/>
-                        <Footer/>
-                    </div>
-
+                    {/*<Slider/>*/}
+                    {/*<div className={''}>*/}
+                    {/*    <Overlay2/>*/}
+                    {/*</div>*/}
+                    {/*<div className={'mt-[-1000px]'}>*/}
+                    {/*    <SlideShow/>*/}
+                    {/*</div>*/}
+                    {/*<div className={'mt-[-1000px] mb-[200px]'}>*/}
+                    {/*    <IndiaLargest/>*/}
+                    {/*</div>*/}
+                    {/*<AtherSpace/>*/}
+                    {/*<div className={'mt-[-1200px]'}>*/}
+                    {/*    <AnimationBlocksHassle/>*/}
+                    {/*</div>*/}
+                    {/*<div className={'mt-[-1200px]'}>*/}
+                    {/*    <TopUp/>*/}
+                    {/*    <FAQ/>*/}
+                    {/*    <Footer/>*/}
+                    {/*</div>*/}
                 </div>
+
 
             )}
             {width <= 480 && (

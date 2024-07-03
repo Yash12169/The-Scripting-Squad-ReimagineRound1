@@ -1,0 +1,90 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: #000;
+    color: greenyellow;
+}
+
+.slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    text-transform: uppercase !important;
+}
+
+@media screen and (min-width: 53em) {
+    .slider {
+        height: 100vh;
+    }
+}
+
+.rgbKineticSlider {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+nav a {
+    text-decoration: none;
+    position: absolute;
+    top: 46vh;
+    z-index: 1;
+    padding: 20px;
+    transition: 0.3s;
+    background: white;
+    color: black;
+}
+
+nav a.next {
+    right: 10vw;
+}
+
+nav a.prev {
+    left: 10vw;
+}
+
+@media screen and (max-width: 53em) {
+    nav a {
+        top: auto;
+        bottom: 3rem;
+    }
+}
+
+
+.montserrat-font {
+                 font-family: "Montserrat", sans-serif;
+                 font-optical-sizing: auto;
+                 font-weight: 700;
+                 font-style: normal;
+             }
+
+.rgbKineticSlider .rgbKineticSlide .rgbSlideText {
+    position: absolute;
+    top: 100px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    color: white; /* Example text color */
+    font-family: 'Montserrat', sans-serif; /* Use the specified Google Font */
+    font-size: 10px; /* Example font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Example text shadow */
+    margin-top: -100px;
+    z-index: 100000; /* Ensure text is above the slider background */
+}
+.rgbKineticSlider2{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 19;
+    background-color: green;
+    height: 100px;
+    width: 100px;
+}
