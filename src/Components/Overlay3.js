@@ -5,7 +5,8 @@ import TransNavbar from "./TransNavbar";
 import mask3 from "../assets/maskFinal.png";
 import vid from "../assets/starting.mp4";
 import '../styles/Overlay2.css';
-
+import {VIDEOS} from './Videos'
+import LoadingScreen from "./LoadingScreen";
 function Overlay3() {
     const [showNavbar, setShowNavbar] = useState(false);
     const [videoFullWidth, setVideoFullWidth] = useState(false);
@@ -21,6 +22,8 @@ function Overlay3() {
     const lastScrollTop = useRef(0);
     const elementRef = useRef(null);
     const [width,setWidth]= useState(0);
+
+
 
 
 
@@ -165,46 +168,46 @@ function Overlay3() {
 
     return (
         <div ref={elementRef}>
-            <div ref={navbarRef} style={{ opacity: 0, position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000 }}>
-                {showNavbar && <TransNavbar />}
+            <div ref={navbarRef} style={{opacity: 0, position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000}}>
+                {showNavbar && <TransNavbar/>}
             </div>
 
 
-                <div className="relative w-screen h-screen flex items-center justify-center overflow-hidden">
-                    <div ref={videoContainerRef}
-                         className="w-full h-full flex items-center justify-center overflow-hidden">
-                        <video
-                            ref={videoRef}
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="object-cover"
-                        >
-                            <source src={vid} type="video/mp4"/>
-                            Your browser does not support the video tag.
-                        </video>
+            <div className="relative w-screen h-screen flex items-center justify-center overflow-hidden">
+                <div ref={videoContainerRef}
+                     className="w-full h-full flex items-center justify-center overflow-hidden">
+                    <video
+                        ref={videoRef}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="object-cover"
+                    >
+                        <source src={vid} type="video/mp4"/>
+                        Your browser does not support the video tag.
+                    </video>
 
-                        <img
-                            ref={maskRef}
-                            src={mask3}
-                            alt="Mask"
-                            className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
-                        />
-                        <div
-                            className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
-                            style={{
-                                opacity: showPercentage ? 1 : 0,
-                                transition: 'opacity 0.5s ease-out'
-                            }}
-                        >
-                            {showPercentage && (
-                                <p className={'absolute bottom-[100px] left-[100px] montserrat-font text-[100px]'}
-                                   style={{color: 'white'}}>{percentComplete}%</p>
-                            )}
-                        </div>
+                    <img
+                        ref={maskRef}
+                        src={mask3}
+                        alt="Mask"
+                        className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
+                    />
+                    <div
+                        className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
+                        style={{
+                            opacity: showPercentage ? 1 : 0,
+                            transition: 'opacity 0.5s ease-out'
+                        }}
+                    >
+                        {showPercentage && (
+                            <p className={'absolute bottom-[100px] left-[100px] montserrat-font text-[100px]'}
+                               style={{color: 'white'}}>{percentComplete}%</p>
+                        )}
                     </div>
                 </div>
+            </div>
 
 
         </div>
