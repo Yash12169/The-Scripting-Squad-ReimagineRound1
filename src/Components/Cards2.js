@@ -24,7 +24,7 @@ const Cards2 = () => {
                     <p>----------</p>
                 </div>
             </div>
-            <TextReveal delay={0.9}>
+            <TextReveal delay={0.5}>
                 <div className={'pickAther'}>
                     <AnimatedText text={"Pick Your Ather"} cards2={cards2}/>
                 </div>

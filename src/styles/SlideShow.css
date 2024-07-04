@@ -69,3 +69,33 @@ margin-left: 130px;
 .slide-bottom-text{
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
 }
+.custom-img-bn-btn {
+     display: inline-flex;
+     padding: 22px 60px;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+     border-radius: 25px;
+     background: linear-gradient(90deg, #4F83CC 0%, #284266 100%);
+     color: #F8F8FF;
+     font-size: 18px;
+     font-style: normal;
+     font-weight: 400;
+     cursor: pointer;
+     line-height: normal;
+ }
+
+.custom-img-lm-btn {
+    color: #F8F8FF;
+    height: fit-content;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    border-bottom: 1px solid #F8F8FF;
+    cursor: pointer;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+}

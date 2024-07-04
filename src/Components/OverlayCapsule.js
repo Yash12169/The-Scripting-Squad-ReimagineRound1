@@ -5,6 +5,7 @@ import vid from '../assets/video2.mp4';
 import mask3 from "../assets/capsuleMask.png";
 import '../styles/Overlay2.css';
 import rizta from '../assets/BikeScooters.png'
+import StaticComponent from "./StaticComponent";
 gsap.registerPlugin(ScrollTrigger);
 
 function OverlayCapsule() {
@@ -13,7 +14,7 @@ function OverlayCapsule() {
     const videoRef = useRef(null);
     const maskRef = useRef(null);
     const textRef = useRef(null); // Reference for the text element
-
+<StaticComponent />
     useLayoutEffect(() => {
         const container = containerRef.current;
         const videoContainer = videoContainerRef.current;
@@ -63,7 +64,7 @@ function OverlayCapsule() {
         <div ref={containerRef} className="relative">
             <div ref={videoContainerRef}
                  className="w-screen h-screen flex items-center justify-center overflow-hidden">
-                    <img  ref={videoRef} src={rizta}/>
+                <StaticComponent/>
 
 
 
@@ -73,24 +74,7 @@ function OverlayCapsule() {
                     alt="Mask"
                     className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
                 />
-                <div
-                    ref={textRef}
-                    className="overlay2-content"
-                >
-                    <div className="overlay2-head montserrat-font">
-                        <p>Introducing Halo & Halo bit</p>
-                    </div>
-                    <div className="overlay2-des montserrat-reg">
-                        <p>Shine Bright, Ride Light - Ather’s Halo & Halobit!</p>
-                    </div>
-                    <div className="overlay2-btn">
-                        <div className="custom-img-bn-btn poppins-regular">Book Now!</div>
-                        <div className="custom-img-lm-btn-ovl poppins-regular">Pre-Book Halo</div>
-                    </div>
-                    <div className="overlay2-bottom poppins-regular">
-                        <p>Smart Helmets</p>
-                    </div>
-                </div>
+
             </div>
             {/*<div className="bg-[#1a2b49] text-white h-screen flex flex-col items-center justify-center">*/}
             {/*    <SlideShow/>*/}

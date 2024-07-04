@@ -42,7 +42,7 @@ const ExpandingCard = () => {
                 <div className='fixed montserrat-reg top-1/2 left-1/2 transform -translate-x-1/2  slider-text-mobile -translate-y-1/2 text-in  p-4 rounded z-10'>
                     {words.join(" ")}
                 </div>
-                <div className="h-[80vh] absolute inset-x-0 top-1/2 transform -translate-y-1/2" style={{ background: backgroundGradient }}>
+                <div className="h-[150vh] absolute inset-x-0 top-1/2 transform -translate-y-1/2" style={{ background: backgroundGradient }}>
                     <motion.div
                         style={{ width }}
                         className="h-[900px] overflow-hidden rounded-lg origin-left absolute top-1/2 left-0 transform -translate-y-1/2"

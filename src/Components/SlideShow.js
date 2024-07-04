@@ -128,7 +128,7 @@ function SlideShow() {
     }, []);
 
     return (
-        <div ref={containerRef} className="relative z-[300]">
+        <div ref={containerRef} className="relative z-[300] overflow-x-hidden">
             <div ref={imageContainerRef}
                  className="w-screen h-screen flex items-center justify-center overflow-hidden">
                 {slides.map((slide, index) => (

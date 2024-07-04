@@ -61,7 +61,7 @@ function IndiaLargest() {
 
     return (
         <div>
-            <div ref={containerRef} className="relative">
+            <div ref={containerRef} className="relative overflow-x-hidden">
                 <div ref={videoContainerRef} className="w-screen h-screen flex flex-col items-center justify-center overflow-hidden">
                     <div className="relative w-full h-full flex items-center justify-center">
                         <img ref={videoRef} src={map} alt="Map" />
@@ -69,7 +69,7 @@ function IndiaLargest() {
                     <div ref={textRef} className="absolute il-content">
                         <div className={'il-left'}>
                             <p className={'il-head montserrat-reg'}>Ather Grid™</p>
-                            <div ref={desRef} className={'il-des montserrat-reg'}>
+                            <div ref={desRef} className={'il-des montserrat-thick'}>
                                 <p>India's Largest</p>
                                 <p>EV two-</p>
                                 <p>wheeler</p>

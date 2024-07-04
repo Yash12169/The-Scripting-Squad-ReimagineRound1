@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import TransNavbar from "./TransNavbar";
@@ -7,6 +6,10 @@ import vid from "../assets/starting.mp4";
 import '../styles/Overlay2.css';
 import {VIDEOS} from './Videos'
 import LoadingScreen from "./LoadingScreen";
+import StaticComponent from "./StaticComponent";
+import Navbar from "./Navbar";
+import vid2 from '../assets/apex_video.mp4'
+
 function Overlay3() {
     const [showNavbar, setShowNavbar] = useState(false);
     const [videoFullWidth, setVideoFullWidth] = useState(false);
@@ -14,6 +17,7 @@ function Overlay3() {
     const [allowScroll, setAllowScroll] = useState(false);
     const [percentComplete, setPercentComplete] = useState(0);
     const [showPercentage, setShowPercentage] = useState(true);
+    const [scrolledPastOverlay, setScrolledPastOverlay] = useState(false);
 
     const videoContainerRef = useRef(null);
     const videoRef = useRef(null);
@@ -21,37 +25,23 @@ function Overlay3() {
     const navbarRef = useRef(null);
     const lastScrollTop = useRef(0);
     const elementRef = useRef(null);
-    const [width,setWidth]= useState(0);
-
-
-
-
-
+    const [width, setWidth] = useState(0);
 
     useEffect(() => {
         const getElementWidth = () => {
             if (elementRef.current) {
-                const currentWidth = elementRef.current.clientWidth; // or use offsetWidth for total width including padding and borders
+                const currentWidth = elementRef.current.clientWidth;
                 setWidth(currentWidth);
             }
         };
 
-        // Call once when component mounts
         getElementWidth();
-
-        // Call whenever window is resized
         window.addEventListener('resize', getElementWidth);
 
-        // Cleanup listener on component unmount
         return () => {
             window.removeEventListener('resize', getElementWidth);
         };
     }, []);
-
-
-
-
-
 
     useEffect(() => {
         const mask = maskRef.current;
@@ -127,6 +117,7 @@ function Overlay3() {
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const overlayHeight = elementRef.current?.clientHeight || 0;
 
             if (!allowScroll) {
                 window.scrollTo(0, 0);
@@ -139,6 +130,8 @@ function Overlay3() {
                     setIsNavbarVisible(true);
                 }
             }
+
+            setScrolledPastOverlay(scrollTop > overlayHeight);
 
             lastScrollTop.current = scrollTop;
         };
@@ -169,13 +162,13 @@ function Overlay3() {
     return (
         <div ref={elementRef}>
             <div ref={navbarRef} style={{opacity: 0, position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000}}>
-                {showNavbar && <TransNavbar/>}
+                {showNavbar && (
+                    scrolledPastOverlay ? <Navbar /> : <TransNavbar />
+                )}
             </div>
 
-
             <div className="relative w-screen h-screen flex items-center justify-center overflow-hidden">
-                <div ref={videoContainerRef}
-                     className="w-full h-full flex items-center justify-center overflow-hidden">
+                <div ref={videoContainerRef} className="w-full h-full flex items-center justify-center overflow-hidden">
                     <video
                         ref={videoRef}
                         autoPlay
@@ -187,7 +180,6 @@ function Overlay3() {
                         <source src={vid} type="video/mp4"/>
                         Your browser does not support the video tag.
                     </video>
-
                     <img
                         ref={maskRef}
                         src={mask3}
@@ -208,8 +200,6 @@ function Overlay3() {
                     </div>
                 </div>
             </div>
-
-
         </div>
     );
 }

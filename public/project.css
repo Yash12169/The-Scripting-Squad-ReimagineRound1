@@ -35,22 +35,29 @@ canvas {
 }
 
 nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     position: absolute;
     top: 46vh;
     z-index: 1;
-    padding: 20px;
+    padding: 15px;
     transition: 0.3s;
-    background: white;
+    background: rgba(162, 186, 198, 0.6);
     color: black;
-}
+    border-radius: 50%;
 
+}
+nav  :hover{
+    background-color: rgba(56, 79, 154, 0.66);
+}
 nav a.next {
-    right: 10vw;
+    right: 1vw;
 }
 
 nav a.prev {
-    left: 10vw;
+    left: 1vw;
 }
 
 @media screen and (max-width: 53em) {
@@ -87,4 +94,8 @@ nav a.prev {
     background-color: green;
     height: 100px;
     width: 100px;
+}
+#left,#right{
+    height: 24px;
+    width: 30px;
 }

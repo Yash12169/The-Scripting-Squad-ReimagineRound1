@@ -3,8 +3,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import vid from '../assets/video2.mp4';
 import mask3 from "../assets/mask3.png";
-// import mask3 from "../assets/capsuleMask.png";
 import '../styles/Overlay2.css';
+
 gsap.registerPlugin(ScrollTrigger);
 
 function Overlay2() {
@@ -12,32 +12,42 @@ function Overlay2() {
     const videoContainerRef = useRef(null);
     const videoRef = useRef(null);
     const maskRef = useRef(null);
-    const textRef = useRef(null); // Reference for the text element
+    const textRef = useRef(null);
 
     useLayoutEffect(() => {
         const container = containerRef.current;
         const videoContainer = videoContainerRef.current;
         const video = videoRef.current;
         const mask = maskRef.current;
-        const text = textRef.current; // Text element
+        const text = textRef.current;
 
-        gsap.set(container, { height: '400vh' }); // Increased for more scroll room
+        gsap.set(container, { height: '400vh' });
 
-        // Set initial video size
         gsap.set(video, { width: '960px', height: '515px' });
-        // gsap.set(video, { width: '100%', height: '100%' });
-        gsap.set(text, { opacity: 0 }); // Initially hide the text
+        gsap.set(text, { opacity: 0 });
 
-        const tl = gsap.timeline({
+        // Initial pause
+        gsap.timeline({
             scrollTrigger: {
                 trigger: container,
                 start: 'top top',
+                end: '+=1', // 1 second pause
+                pin: videoContainer,
+                pinSpacing: false,
+            }
+        });
+
+        // Main animation timeline
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: container,
+                start: '+=1 top', // Start after the initial pause
                 end: 'bottom bottom',
-                scrub: 1,
-                pin: videoContainer, // Pin the video container
-                pinSpacing: false, // Ensure smooth transition without abrupt disappearance
+                scrub: 2,
+                pin: videoContainer,
+                pinSpacing: false,
                 onUpdate: (self) => {
-                    if (self.progress >= 0.3) {
+                    if (self.progress >= 0.1) {
                         gsap.to(text, { opacity: 1, duration: 1 });
                     } else {
                         gsap.to(text, { opacity: 0, duration: 1 });
@@ -46,13 +56,13 @@ function Overlay2() {
             },
         });
 
-        tl.to(mask, { scale: 10, opacity: 0, duration: 2 })
+        tl.to(mask, { scale: 10, opacity: 0, duration: 20 }) // Increased duration to slow down the scaling
             .to(video, {
                 width: '100%',
                 height: '100%',
                 duration: 2,
             }, '<') // Start at the same time as mask animation
-            .to(videoContainer, { yPercent: -100, duration: 2, ease: 'none' }, '>'); // Smooth scroll up and out
+            .to(videoContainer, { yPercent: -100, duration: 2, ease: 'none' }, '>');
 
         return () => {
             tl.kill();
@@ -60,7 +70,7 @@ function Overlay2() {
     }, []);
 
     return (
-        <div ref={containerRef} className="relative">
+        <div ref={containerRef} className="relative overflow-x-hidden">
             <div ref={videoContainerRef}
                  className="w-screen h-screen flex items-center justify-center overflow-hidden">
                 <video
@@ -100,9 +110,6 @@ function Overlay2() {
                     </div>
                 </div>
             </div>
-            {/*<div className="bg-[#1a2b49] text-white h-screen flex flex-col items-center justify-center">*/}
-            {/*    <SlideShow/>*/}
-            {/*</div>*/}
         </div>
     );
 }

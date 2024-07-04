@@ -13,19 +13,20 @@ import AnimationBlocksHassle from "./Components/AnimationBlocksHassle";
 import TopUp from "./Components/TopUp";
 import Overlay3Mobile from "./MobileComponent/Overlay3Mobile";
 import FAQmobile from "./MobileComponent/FAQmobile";
-import SliderUtilsMobile from "./MobileComponent/SliderUtilsMobile";
 import AtherSpaceMobile from "./MobileComponent/AtherSpaceMobile";
 import IndiaLargestMobile from "./MobileComponent/IndiaLargestMobile";
-import CardsMobile from "./MobileComponent/CardsMobile";
 import CardComponent from "./Components/CardComponent";
 import Overlay2Mobile from "./MobileComponent/Overlay2Mobile";
 import HassleFreeMobile from "./MobileComponent/HassleFreeMobile";
 import SliderMobile from "./MobileComponent/SliderMobile";
 import SlideShowMobile from "./MobileComponent/SlideShowMobile";
 import HorizontalSliderMobile from "./MobileComponent/HorizontalSliderMobile";
-import StaticComponent from "./Components/StaticComponent";
 import LoadingScreen from "./Components/LoadingScreen";
 import { VIDEOS } from "./Components/Videos";
+import FooterMobile from "./MobileComponent/FooterMoblie";
+import OverlayCapsule from "./Components/OverlayCapsule";
+import SlideShowMobile2 from "./MobileComponent/SlideShowMobile2";
+import {DrawOutlineButton} from "./Components/Outline";
 
 function App() {
     const elementRef = useRef(null);
@@ -79,45 +80,66 @@ function App() {
             <div className={'overflow-x-hidden'}>
                 <Overlay3 />
             </div>
-            <StaticComponent />
-            <div>
-                <Cards2 />
-                <Cards />
-            </div>
-            <Slider />
-            <div className={''}>
-                <Overlay2 />
-            </div>
-            <div className={'mt-[-1000px]'}>
-                <SlideShow />
-            </div>
-            <div className={'mt-[-1000px] mb-[200px]'}>
-                <IndiaLargest />
-            </div>
-            <AtherSpace />
-            <div className={'mt-[-1200px]'}>
-                <AnimationBlocksHassle />
-            </div>
-            <div className={'mt-[-1200px]'}>
-                <TopUp />
-                <FAQ />
-                <Footer />
-            </div>
+
+            {/*<OverlayCapsule/>*/}
+            {/*<TextReveal delay={0.5}>*/}
+            {/*    <StaticComponent/>*/}
+            {/*</TextReveal>*/}
+            {/*<div className={'mt-[-600px]'}>*/}
+
+            {/*      <Cards2 />*/}
+
+            {/*    <Cards />*/}
+            {/*/!*</div>*!/*/}
+            {/*<Slider />*/}
+            {/*<div className={''}>*/}
+            {/*    <Overlay2 />*/}
+            {/*</div>*/}
+            {/*    <div className={'mt-[-2500px]'}>*/}
+            {/*        <SlideShow />*/}
+            {/*    </div>*/}
+            {/*    <div className={'mt-[-1000px] mb-[200px]'}>*/}
+            {/*        <IndiaLargest />*/}
+            {/*    </div>*/}
+            {/*    <AtherSpace />*/}
+            {/*    <div className={'mt-[-1200px]'}>*/}
+            {/*        <AnimationBlocksHassle />*/}
+            {/*    </div>*/}
+            {/*    <div className={'mt-[-1200px]'}>*/}
+            {/*        <TopUp />*/}
+            {/*        <FAQ />*/}
+            {/*        <Footer />*/}
+            {/*    </div>*/}
         </div>
     );
 
     const renderMobileContent = () => (
         <div>
             <Overlay3Mobile />
-            <CardComponent />
-            <SliderMobile />
+            <SlideShowMobile2/>
+            {/*<OverlayCapsuleMobile/>*/}
+          <div className={'mt-[-1000px]'}>
+              <CardComponent />
+          </div>
+           <div className={'mt-[-550px]'}>
+               <SliderMobile />
+           </div>
             <Overlay2Mobile />
-            <SlideShowMobile />
-            <IndiaLargestMobile />
-            <AtherSpaceMobile />
-            <HassleFreeMobile />
-            <HorizontalSliderMobile />
-            <FAQmobile />
+          <div className={'mt-[-600px]'}>
+              <SlideShowMobile />
+          </div>
+           <div className={'mt-[-800px]'}>
+               <IndiaLargestMobile />
+               <AtherSpaceMobile />
+           </div>
+           <div className={'mt-[-1000px]'}>
+               <HassleFreeMobile />
+           </div>
+           <div className={'mt-[-600px]'}>
+               <HorizontalSliderMobile />
+               <FAQmobile />
+               <FooterMobile/>
+           </div>
         </div>
     );
 
