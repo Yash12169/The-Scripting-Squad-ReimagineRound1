@@ -86,3 +86,7 @@
     font-weight: 500;
     font-style: normal;
 }
+/* Overlay2.css */
+.bg-black {
+    background-color: white;
+}

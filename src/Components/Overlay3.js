@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import TransNavbar from "./TransNavbar";
@@ -27,6 +28,36 @@ function Overlay3() {
     const elementRef = useRef(null);
     const [width, setWidth] = useState(0);
 
+
+
+
+    // useEffect(() => {
+    //     const videoElement = videoRef.current;
+    //
+    //     const handleLoadedMetadata = () => {
+    //         videoElement.currentTime = 56;
+    //         videoElement.play();
+    //     };
+    //
+    //     const handleTimeUpdate = () => {
+    //         if (videoElement.currentTime >= 60) {
+    //             videoElement.currentTime =56;
+    //             videoElement.play();
+    //         }
+    //     };
+    //
+    //     if (videoElement) {
+    //         videoElement.addEventListener('loadedmetadata', handleLoadedMetadata);
+    //         videoElement.addEventListener('timeupdate', handleTimeUpdate);
+    //     }
+    //
+    //     return () => {
+    //         if (videoElement) {
+    //             videoElement.removeEventListener('loadedmetadata', handleLoadedMetadata);
+    //             videoElement.removeEventListener('timeupdate', handleTimeUpdate);
+    //         }
+    //     };
+    // }, []);
     useEffect(() => {
         const getElementWidth = () => {
             if (elementRef.current) {

@@ -27,6 +27,7 @@ import FooterMobile from "./MobileComponent/FooterMoblie";
 import OverlayCapsule from "./Components/OverlayCapsule";
 import SlideShowMobile2 from "./MobileComponent/SlideShowMobile2";
 import {DrawOutlineButton} from "./Components/Outline";
+import Animation2 from "./Components/Animation2";
 
 function App() {
     const elementRef = useRef(null);
@@ -80,36 +81,36 @@ function App() {
             <div className={'overflow-x-hidden'}>
                 <Overlay3 />
             </div>
+            <div className={'mt-[200px] mb-[3500px]'}>
+                <Animation2/>
+            </div>
 
-            {/*<OverlayCapsule/>*/}
-            {/*<TextReveal delay={0.5}>*/}
-            {/*    <StaticComponent/>*/}
-            {/*</TextReveal>*/}
-            {/*<div className={'mt-[-600px]'}>*/}
 
-            {/*      <Cards2 />*/}
+            <div className={''}>
 
-            {/*    <Cards />*/}
-            {/*/!*</div>*!/*/}
-            {/*<Slider />*/}
-            {/*<div className={''}>*/}
-            {/*    <Overlay2 />*/}
-            {/*</div>*/}
-            {/*    <div className={'mt-[-2500px]'}>*/}
-            {/*        <SlideShow />*/}
-            {/*    </div>*/}
-            {/*    <div className={'mt-[-1000px] mb-[200px]'}>*/}
-            {/*        <IndiaLargest />*/}
-            {/*    </div>*/}
-            {/*    <AtherSpace />*/}
-            {/*    <div className={'mt-[-1200px]'}>*/}
-            {/*        <AnimationBlocksHassle />*/}
-            {/*    </div>*/}
-            {/*    <div className={'mt-[-1200px]'}>*/}
-            {/*        <TopUp />*/}
-            {/*        <FAQ />*/}
-            {/*        <Footer />*/}
-            {/*    </div>*/}
+                  <Cards2 />
+
+                <Cards />
+            </div>
+            <Slider />
+            <div className={''}>
+                <Overlay2 />
+            </div>
+                <div className={'mt-[-2500px]'}>
+                    <SlideShow />
+                </div>
+                <div className={'mt-[-1000px] mb-[200px]'}>
+                    <IndiaLargest />
+                </div>
+                <AtherSpace />
+                <div className={'mt-[-1200px]'}>
+                    <AnimationBlocksHassle />
+                </div>
+                <div className={'mt-[-1200px]'}>
+                    <TopUp />
+                    <FAQ />
+                    <Footer />
+                </div>
         </div>
     );
 

@@ -23,6 +23,7 @@
     "react-spring": "^9.7.3",
     "react-transition-group": "^4.4.5",
     "slick-carousel": "^1.8.1",
+    "split-type": "^0.3.4",
     "styled-components": "^6.1.11",
     "transition": "^0.1.1",
     "web-vitals": "^2.1.4"
