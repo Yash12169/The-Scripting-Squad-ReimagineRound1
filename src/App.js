@@ -28,6 +28,12 @@ import OverlayCapsule from "./Components/OverlayCapsule";
 import SlideShowMobile2 from "./MobileComponent/SlideShowMobile2";
 import {DrawOutlineButton} from "./Components/Outline";
 import Animation2 from "./Components/Animation2";
+import Animation3 from "./Components/Animation3";
+import TransNavbar from "./Components/TransNavbar";
+import Navbar from "./Components/Navbar";
+import  {SlideTabsExample} from "./Components/SlideTabs";
+import TextRevealStag2 from "./Components/TextRevealStag2";
+import TextRevealStag from "./Components/TextRevealStag";
 
 function App() {
     const elementRef = useRef(null);
@@ -78,15 +84,16 @@ function App() {
 
     const renderDesktopContent = () => (
         <div>
-            <div className={'overflow-x-hidden'}>
-                <Overlay3 />
-            </div>
-            <div className={'mt-[200px] mb-[3500px]'}>
+            {/*<TransNavbar/>*/}
+            {/*<div className={'overflow-x-hidden'}>*/}
+            {/*    <Overlay3 />*/}
+            {/*</div>*/}
+            {/*<div className={'mb-[3500px] h-[3000px]'}>*/}
                 <Animation2/>
-            </div>
 
+            {/*</div>*/}
 
-            <div className={''}>
+         <div className={'mt-[4500px]'}>
 
                   <Cards2 />
 
@@ -102,7 +109,9 @@ function App() {
                 <div className={'mt-[-1000px] mb-[200px]'}>
                     <IndiaLargest />
                 </div>
-                <AtherSpace />
+                <div className={'mt-[5000px]'}>
+                    <AtherSpace />
+                </div>
                 <div className={'mt-[-1200px]'}>
                     <AnimationBlocksHassle />
                 </div>
@@ -116,6 +125,7 @@ function App() {
 
     const renderMobileContent = () => (
         <div>
+
             <Overlay3Mobile />
             <SlideShowMobile2/>
             {/*<OverlayCapsuleMobile/>*/}

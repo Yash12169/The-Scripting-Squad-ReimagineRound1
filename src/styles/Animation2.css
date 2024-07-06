@@ -64,7 +64,7 @@
         display: flex;
         justify-content: center;
 
-        border: 1p;
+
         border-radius: 35px;
         margin: auto;
         margin-top: 140px;
@@ -76,11 +76,16 @@
     border-radius: 35px;
 }
 .ani2-empty{
-    border-radius:0px 0px 35px 35px;
+    display: flex;
+    border-radius:0px 0px 55px 55px;
+    color: transparent;
     background-color: #1D2951;
-    margin-right: 15px;
-
-    box-shadow: 0px 40px 60px 30px rgba(0, 0, 0, 0.25);
+    /*margin-right: 15px;*/
+    flex-direction: column;
+    /*margin-top: 1000px;*/
+    width: 99.2%;
+    height: 210px;
+    box-shadow: 0px 40px 60px -1px rgba(0, 0, 0, 0.25);
 }
 .ani2-title{
     background:  linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.38) 100%);
@@ -149,4 +154,34 @@ align-items: center;
     }
     .type2-bottom{
         margin-top: 250px;
+    }
+    .line-height{
+        line-height: 8rem;
+    }
+    .poppins-thick {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+    .navbar-transition {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .navbar-transition.show {
+        opacity: 1;
+    }
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .slide-down-navbar {
+        animation: slideDown 0.5s ease forwards;
     }

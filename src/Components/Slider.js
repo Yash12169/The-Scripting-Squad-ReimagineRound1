@@ -39,7 +39,7 @@ const ExpandingCard = () => {
                 style={{ y: translateY }}
                 className="sticky top-0 h-screen carda rounded-3xl flex flex-col justify-center overflow-hidden ml-[10px] mr-[10px]"
             >
-                <div className='fixed montserrat-reg top-1/2 left-1/2 transform -translate-x-1/2  slider-text -translate-y-1/2 text-in  p-4 rounded z-10'>
+                <div className='fixed montserrat-thick top-1/2 left-1/2 transform -translate-x-1/2  slider-text -translate-y-1/2 text-in  p-4 rounded z-10'>
                     {words.join(" ")}
                 </div>
                 <div className="h-[120vh] absolute inset-x-0 top-1/2 transform -translate-y-1/2" style={{ background: backgroundGradient }}>

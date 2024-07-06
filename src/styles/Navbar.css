@@ -79,6 +79,8 @@
 li {
     margin-right: 30px;
     cursor: pointer;
+    /*color: white;*/
+    /*mix-blend-mode: difference;*/
 }
 
 #ham {

@@ -1,0 +1,9 @@
+.mix-nav-items{
+    color:  white;
+/*position: fixed;*/
+    mix-blend-mode: difference;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

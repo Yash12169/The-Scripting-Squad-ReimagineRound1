@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import TransNavbar from "./TransNavbar";
@@ -10,6 +9,7 @@ import LoadingScreen from "./LoadingScreen";
 import StaticComponent from "./StaticComponent";
 import Navbar from "./Navbar";
 import vid2 from '../assets/apex_video.mp4'
+import Animation2 from "./Animation2";
 
 function Overlay3() {
     const [showNavbar, setShowNavbar] = useState(false);
@@ -28,36 +28,6 @@ function Overlay3() {
     const elementRef = useRef(null);
     const [width, setWidth] = useState(0);
 
-
-
-
-    // useEffect(() => {
-    //     const videoElement = videoRef.current;
-    //
-    //     const handleLoadedMetadata = () => {
-    //         videoElement.currentTime = 56;
-    //         videoElement.play();
-    //     };
-    //
-    //     const handleTimeUpdate = () => {
-    //         if (videoElement.currentTime >= 60) {
-    //             videoElement.currentTime =56;
-    //             videoElement.play();
-    //         }
-    //     };
-    //
-    //     if (videoElement) {
-    //         videoElement.addEventListener('loadedmetadata', handleLoadedMetadata);
-    //         videoElement.addEventListener('timeupdate', handleTimeUpdate);
-    //     }
-    //
-    //     return () => {
-    //         if (videoElement) {
-    //             videoElement.removeEventListener('loadedmetadata', handleLoadedMetadata);
-    //             videoElement.removeEventListener('timeupdate', handleTimeUpdate);
-    //         }
-    //     };
-    // }, []);
     useEffect(() => {
         const getElementWidth = () => {
             if (elementRef.current) {
@@ -174,13 +144,13 @@ function Overlay3() {
     useEffect(() => {
         if (navbarRef.current) {
             gsap.to(navbarRef.current, {
-                opacity: isNavbarVisible ? 1 : 0,
-                y: isNavbarVisible ? 0 : -50,
+                opacity: isNavbarVisible && !scrolledPastOverlay ? 1 : 0,
+                y: isNavbarVisible && !scrolledPastOverlay ? 0 : -50,
                 duration: 0.3,
                 ease: 'power2.out'
             });
         }
-    }, [isNavbarVisible]);
+    }, [isNavbarVisible, scrolledPastOverlay]);
 
     useEffect(() => {
         if (!allowScroll) {
@@ -192,13 +162,21 @@ function Overlay3() {
 
     return (
         <div ref={elementRef}>
-            <div ref={navbarRef} style={{opacity: 0, position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000}}>
-                {showNavbar && (
-                    scrolledPastOverlay ? <Navbar /> : <TransNavbar />
-                )}
+            <div ref={navbarRef} style={{
+                opacity: 0,
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                right: 0,
+                zIndex: 1000,
+                mixBlendMode: "difference"
+            }}>
+                {/*{showNavbar && (*/}
+                {/*    <TransNavbar/>*/}
+                {/*)}*/}
             </div>
 
-            <div className="relative w-screen h-screen flex items-center justify-center overflow-hidden">
+            <div className="relative w-screen h-screen flex flex-col items-center justify-center overflow-hidden">
                 <div ref={videoContainerRef} className="w-full h-full flex items-center justify-center overflow-hidden">
                     <video
                         ref={videoRef}
@@ -229,8 +207,11 @@ function Overlay3() {
                                style={{color: 'white'}}>{percentComplete}%</p>
                         )}
                     </div>
+
                 </div>
+
             </div>
+
         </div>
     );
 }

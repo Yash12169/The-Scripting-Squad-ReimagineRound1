@@ -1,24 +1,71 @@
-import React, { useRef } from "react";
-import {
-    motion,
-    useMotionTemplate,
-    useMotionValue,
-    useSpring,
-} from "framer-motion";
-import '../styles/Cards.css'
-import rizta from '../assets/AtherRizta.png'
+import React, { useRef, useState, useEffect } from "react";
+import { gsap } from 'gsap';
+import { motion, useMotionTemplate, useMotionValue, useSpring } from "framer-motion";
+import TransNavbar from "./TransNavbar";
+import '../styles/Cards.css';
+import rizta from '../assets/AtherRizta.png';
 import AnimatedText from "./AnimatedText";
 import TextReveal from "./TextReveal";
+
 const Cards2 = () => {
-    const cards2= true;
+    const [isNavbarVisible, setIsNavbarVisible] = useState(false);
+    const lastScrollTop = useRef(0);
+    const navbarRef = useRef(null);
+    const elementRef = useRef(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Show navbar when scrolling up and hide when scrolling down after 5100px
+            if (scrollTop > 4900) {
+                if (scrollTop < lastScrollTop.current) {
+                    setIsNavbarVisible(true);
+                } else {
+                    setIsNavbarVisible(false);
+                }
+            } else {
+                setIsNavbarVisible(false);
+            }
+
+            lastScrollTop.current = scrollTop;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    useEffect(() => {
+        if (navbarRef.current) {
+            gsap.to(navbarRef.current, {
+                opacity: isNavbarVisible ? 1 : 0,
+                y: isNavbarVisible ? 0 : -50,
+                duration: 0.3,
+                ease: 'power2.out'
+            });
+        }
+    }, [isNavbarVisible]);
+
     return (
-        <div className={'primary-bg'}>
+        <div ref={elementRef} className={'primary-bg'}>
+            <div ref={navbarRef} style={{
+                opacity: 0,
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                right: 0,
+                zIndex: 1000,
+                mixBlendMode: "difference"
+            }}>
+                <TransNavbar />
+            </div>
+
             <div className={'more-thrills'}>
                 <AnimatedText text={'More Thrills. Per Second.'} cards2={false}/>
                 <TextReveal delay={0.6}>
-                    <p className={'mt-txt poppins-regular'}>Presenting all-new electric scooters from Ather. Built to
-                        outperform both EV scooters and petrol scooters alike, with all the style, smarts and speed you
-                        need.</p>
+                    <p className={'mt-txt poppins-regular'}>
+                        Presenting all-new electric scooters from Ather. Built to outperform both EV scooters and petrol scooters alike, with all the style, smarts and speed you need.
+                    </p>
                 </TextReveal>
                 <div className={'shadow-circle2'}>
                     <p>----------</p>
@@ -26,14 +73,13 @@ const Cards2 = () => {
             </div>
             <TextReveal delay={0.5}>
                 <div className={'pickAther'}>
-                    <AnimatedText text={"Pick Your Ather"} cards2={cards2}/>
+                    <AnimatedText text={"Pick Your Ather"} cards2={true}/>
                 </div>
             </TextReveal>
             <div className="grid w-full place-content-center product-container px-4 py-12 text-slate-900">
-            <TiltCard/>
+                <TiltCard/>
             </div>
         </div>
-
     );
 };
 
@@ -111,7 +157,7 @@ const TiltCard = () => {
                         </div>
                     </div>
                 </div>
-                <img  className={'mr-[205px] w-[440px] h-[459px] mt-[45px]'} src={rizta}/>
+                <img className={'mr-[205px] w-[440px] h-[459px] mt-[45px]'} src={rizta} alt="Ather Rizta"/>
             </div>
         </motion.div>
     );
