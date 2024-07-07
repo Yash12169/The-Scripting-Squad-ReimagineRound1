@@ -90,3 +90,24 @@
 .bg-black {
     background-color: white;
 }
+@keyframes lineExpand {
+    from {
+        width: 0;
+    }
+    to {
+        width: 720px;
+    }
+}
+@keyframes lineExpandRev {
+    from {
+        width: 0;
+    }
+    to {
+        width: 1200px;
+    }
+}
+
+.animate-line {
+    animation: lineExpand 4s forwards;
+    transform-origin: right;
+}

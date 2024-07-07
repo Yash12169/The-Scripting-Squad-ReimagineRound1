@@ -34,6 +34,7 @@ import Navbar from "./Components/Navbar";
 import  {SlideTabsExample} from "./Components/SlideTabs";
 import TextRevealStag2 from "./Components/TextRevealStag2";
 import TextRevealStag from "./Components/TextRevealStag";
+import Animation2Mobile from "./MobileComponent/Animation2Mobile";
 
 function App() {
     const elementRef = useRef(null);
@@ -109,7 +110,7 @@ function App() {
                 <div className={'mt-[-1000px] mb-[200px]'}>
                     <IndiaLargest />
                 </div>
-                <div className={'mt-[5000px]'}>
+                <div className={'mt-[00px]'}>
                     <AtherSpace />
                 </div>
                 <div className={'mt-[-1200px]'}>
@@ -127,14 +128,11 @@ function App() {
         <div>
 
             <Overlay3Mobile />
-            <SlideShowMobile2/>
-            {/*<OverlayCapsuleMobile/>*/}
-          <div className={'mt-[-1000px]'}>
-              <CardComponent />
-          </div>
-           <div className={'mt-[-550px]'}>
+            <Animation2Mobile/>
+              <div className={'mt-[3300px]'}>
+                  <CardComponent />
+              </div>
                <SliderMobile />
-           </div>
             <Overlay2Mobile />
           <div className={'mt-[-600px]'}>
               <SlideShowMobile />
@@ -146,7 +144,7 @@ function App() {
            <div className={'mt-[-1000px]'}>
                <HassleFreeMobile />
            </div>
-           <div className={'mt-[-600px]'}>
+           <div className={'mt-[-900px]'}>
                <HorizontalSliderMobile />
                <FAQmobile />
                <FooterMobile/>

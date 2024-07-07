@@ -1,0 +1,141 @@
+.montserrat-thick-2-mobile {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.char-mobile {
+    display: inline-block;
+}
+.spacer-mobile {
+    width: 100%;
+    margin-left: 100px;
+    height: 116px;
+    position: absolute;
+    background-color: greenyellow;
+    top: 960px;
+    z-index: 5;
+}
+.videoContainer-mobile {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin-left: 60px;
+    display: flex;
+}
+.videoContainer-mobile video {
+    min-width: 100%;
+    min-height: 100%;
+}
+.video-cont-ani-mobile {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 60px;
+}
+.video-player-mobile {
+    width: 100%;
+    border-radius: 35px;
+}
+.ani2-empty-mobile {
+    display: flex;
+    border-radius: 0px 0px 55px 55px;
+    color: transparent;
+    background-color: #1D2951;
+    width: 100%;
+    height: 210px;
+    box-shadow: 0px 40px 60px -1px rgba(0, 0, 0, 0.25);
+    flex-direction: column;
+}
+.ani2-title-mobile {
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.38) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.model-ani2-mobile {
+    color: #FFF;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.ani2-btn-bn-mobile {
+    width: 218px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #4F83CC 0%, #284266 100%);
+    height: 71px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.ani2-btn-lm-mobile {
+    color: #F8F8FF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+.ani2-btn-container-mobile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.slide-bottom-ani2-mobile {
+    width: 85vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 320px;
+}
+.slide-object-ani-mobile {
+    display: flex;
+    height: fit-content;
+    color: #F8F8FF;
+    gap: 78px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.type2-bottom-mobile {
+    margin-top: 250px;
+}
+.line-height-mobile {
+    line-height: 4rem;
+}
+.poppins-thick-mobile {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.navbar-transition-mobile {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.navbar-transition-mobile.show {
+    opacity: 1;
+}
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.slide-down-navbar-mobile {
+    animation: slideDown 0.5s ease forwards;
+}

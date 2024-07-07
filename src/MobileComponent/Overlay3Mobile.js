@@ -1,11 +1,10 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import TransNavbar from "../Components/TransNavbar";
 import mask3 from "../assets/maskMobile.png";
 import vid from "../assets/starting.mp4";
 import '../styles/Overlay2.css';
-import '../stylesMobile/Overlay3Mobile.css'
+import '../stylesMobile/Overlay3Mobile.css';
 import TransNavbarMobile from "./TransNavbarMobile";
 
 function Overlay3Mobile() {
@@ -22,10 +21,7 @@ function Overlay3Mobile() {
     const navbarRef = useRef(null);
     const lastScrollTop = useRef(0);
     const elementRef = useRef(null);
-    const [width,setWidth]= useState(0);
-
-
-
+    const [width, setWidth] = useState(0);
 
     useEffect(() => {
         const getElementWidth = () => {
@@ -46,11 +42,6 @@ function Overlay3Mobile() {
             window.removeEventListener('resize', getElementWidth);
         };
     }, []);
-
-
-
-
-
 
     useEffect(() => {
         const mask = maskRef.current;
@@ -132,7 +123,7 @@ function Overlay3Mobile() {
             }
 
             if (videoFullWidth) {
-                if (scrollTop > lastScrollTop.current) {
+                if (scrollTop > 2000 ) {
                     setIsNavbarVisible(false);
                 } else {
                     setIsNavbarVisible(true);
@@ -167,10 +158,9 @@ function Overlay3Mobile() {
 
     return (
         <div ref={elementRef}>
-            <div ref={navbarRef} style={{ opacity: 0, position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000 }}>
-                {showNavbar && <TransNavbarMobile/>}
+            <div ref={navbarRef} style={{ opacity: 0, position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000}}>
+                {showNavbar && <TransNavbarMobile />}
             </div>
-
 
             <div className="relative w-screen h-screen flex items-center justify-center overflow-hidden">
                 <div ref={videoContainerRef}
@@ -183,7 +173,7 @@ function Overlay3Mobile() {
                         playsInline
                         className="object-cover"
                     >
-                        <source src={vid} type="video/mp4"/>
+                        <source src={vid} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
 
@@ -201,14 +191,12 @@ function Overlay3Mobile() {
                         }}
                     >
                         {showPercentage && (
-                            <p className={'absolute bottom-[100px]  montserrat-font-mob text-[48px]'}
-                               style={{color: 'white'}}>{percentComplete}%</p>
+                            <p className={'absolute bottom-[100px] montserrat-font-mob text-[48px]'}
+                               style={{ color: 'white' }}>{percentComplete}%</p>
                         )}
                     </div>
                 </div>
             </div>
-
-
         </div>
     );
 }

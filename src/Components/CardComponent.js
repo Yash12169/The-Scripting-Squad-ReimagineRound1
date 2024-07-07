@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../styles/CardComponent.css';
 import { ScrollObserver, valueAtPercentage } from 'aatjs'; // Assuming you have aat.js as a package
 
@@ -12,9 +12,30 @@ import CardsMobile1 from "../MobileComponent/CardsMobile1";
 import CardsMobile2 from "../MobileComponent/CardsMobile2";
 import CardsMobile3 from "../MobileComponent/CardsMobile3";
 import TextReveal from "./TextReveal";
+import TransNavbarMobile from "../MobileComponent/TransNavbarMobile"; // Add this import
 
 const CardComponent = () => {
-    const cards2= true;
+    const [showNavbar, setShowNavbar] = useState(false);
+    const prevScrollPos = useRef(window.pageYOffset);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > 4300) {
+                setShowNavbar(prevScrollPos.current > currentScrollPos);
+            } else {
+                setShowNavbar(false);
+            }
+
+            prevScrollPos.current = currentScrollPos;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     useEffect(() => {
         const cardsContainer = document.querySelector('.cards');
         const cards = document.querySelectorAll('.card');
@@ -39,7 +60,11 @@ const CardComponent = () => {
 
     return (
         <>
-            <div className={'more-thrills-container'} >
+            <div className={`navbar-mob ${showNavbar ? 'visible' : ''}`}>
+                <TransNavbarMobile />
+            </div>
+
+            <div className={'more-thrills-container'}>
                 <TextReveal delay={0.1}>
                     <div className={'more-thrills-mobile montserrat-reg'}>
                         <p>More Thrills.</p>
@@ -65,23 +90,23 @@ const CardComponent = () => {
             </TextReveal>
             <div className="cards">
                 <div className="card" data-index="0">
-                <div className="card__inner  rounded-xl card-background">
-                        <CardsMobile/>
+                    <div className="card__inner rounded-xl card-background">
+                        <CardsMobile />
                     </div>
                 </div>
                 <div className="card" data-index="1">
                     <div className="card__inner rounded-xl card-background">
-                        <CardsMobile2/>
+                        <CardsMobile2 />
                     </div>
                 </div>
                 <div className="card" data-index="2">
                     <div className="card__inner rounded-xl card-background">
-                        <CardsMobile3/>
+                        <CardsMobile3 />
                     </div>
                 </div>
                 <div className="card" data-index="3">
-                    <div className="card__inner  rounded-xl card-background">
-                        <CardsMobile1/>
+                    <div className="card__inner rounded-xl card-background">
+                        <CardsMobile1 />
                     </div>
                 </div>
             </div>

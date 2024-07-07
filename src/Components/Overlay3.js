@@ -108,7 +108,7 @@ function Overlay3() {
                 clearInterval(interval);
                 setTimeout(() => {
                     setShowPercentage(false);
-                }, 500);
+                }, 50);
             }
         }, 30);
 
@@ -203,10 +203,22 @@ function Overlay3() {
                         }}
                     >
                         {showPercentage && (
-                            <p className={'absolute bottom-[100px] left-[100px] montserrat-font text-[100px]'}
+
+                            <p className={'absolute bottom-[100px] montserrat-font text-[100px]'}
                                style={{color: 'white'}}>{percentComplete}%</p>
+
                         )}
                     </div>
+                    {
+                        showPercentage && (
+                            <div>
+                                <div
+                                    className="w-0 h-[5px] bg-white absolute bottom-[170px] right-[1100px] animate-line"></div>
+                                <div
+                                    className="w-0 h-[5px] bg-white absolute bottom-[170px] left-[1100px] animate-line"></div>
+                            </div>
+                        )
+                    }
 
                 </div>
 
