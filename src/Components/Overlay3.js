@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import TransNavbar from "./TransNavbar";
-import mask3 from "../assets/maskFinal.png";
+import mask3 from "../assets/mask2.png";
+import newMask from "../assets/maskTop.png"; // Add this line
 import vid from "../assets/starting.mp4";
 import '../styles/Overlay2.css';
 import {VIDEOS} from './Videos'
@@ -23,6 +24,7 @@ function Overlay3() {
     const videoContainerRef = useRef(null);
     const videoRef = useRef(null);
     const maskRef = useRef(null);
+    const newMaskRef = useRef(null); // Add this line
     const navbarRef = useRef(null);
     const lastScrollTop = useRef(0);
     const elementRef = useRef(null);
@@ -46,21 +48,33 @@ function Overlay3() {
 
     useEffect(() => {
         const mask = maskRef.current;
+        const newMask = newMaskRef.current;
         const video = videoRef.current;
 
-        gsap.set(video, { width: '400px', height: '250px' });
+        gsap.set(video, { width: '100%', height: '100vh' });
+        gsap.set(newMask, { opacity: 1 });
 
         const tl = gsap.timeline();
 
         setTimeout(() => {
-            tl.to(mask, {
-                scale: 10,
+            // Fade out the new mask over 2 seconds
+            tl.to(newMask, {
                 opacity: 0,
+                duration: 2,
+                onComplete: () => {
+                    gsap.set(newMask, { display: 'none' });
+                }
+            });
+
+            // After 1 second (3 seconds total), start the original mask animation
+            tl.to(mask, {
+                scale: 80,
+                opacity: 1,
                 duration: 2,
                 onComplete: () => {
                     gsap.set(mask, { display: 'none' });
                 }
-            })
+            }, "+=1")
                 .to(video, {
                     width: '100%',
                     height: '100%',
@@ -80,7 +94,7 @@ function Overlay3() {
                         }, 1000);
                     }
                 }, '<');
-        }, 3500);
+        }, 1500);
 
         return () => {
             tl.kill();
@@ -195,6 +209,12 @@ function Overlay3() {
                         alt="Mask"
                         className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
                     />
+                    <img
+                        ref={newMaskRef}
+                        src={newMask}
+                        alt="New Mask"
+                        className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
+                    />
                     <div
                         className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
                         style={{
@@ -203,10 +223,8 @@ function Overlay3() {
                         }}
                     >
                         {showPercentage && (
-
                             <p className={'absolute bottom-[100px] montserrat-font text-[100px]'}
                                style={{color: 'white'}}>{percentComplete}%</p>
-
                         )}
                     </div>
                     {
@@ -219,11 +237,8 @@ function Overlay3() {
                             </div>
                         )
                     }
-
                 </div>
-
             </div>
-
         </div>
     );
 }

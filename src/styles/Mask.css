@@ -1,0 +1,27 @@
+/* Mask.css */
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-cover: cover;
+    pointer-events: none;
+}
+.mask-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.mask-new {
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    mix-blend-mode: difference;
+}
+
+.mask-new.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
