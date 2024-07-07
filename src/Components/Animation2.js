@@ -20,7 +20,7 @@ function Animation2() {
         // Show the navbar after a delay
         const showNavbarTimeout = setTimeout(() => {
             setShowNavbar(true);
-        }, 6000); // Show the navbar after 6 seconds
+        }, 8000); // Show the navbar after 6 seconds
 
         // Clean up timeout on unmount
         return () => clearTimeout(showNavbarTimeout);
