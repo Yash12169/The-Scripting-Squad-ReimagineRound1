@@ -10,6 +10,7 @@ import dull_bar from "../assets/dull_bar.png";
 import arrow_down from "../assets/arrow_down.svg";
 import Overlay3 from "./Overlay3";
 import TransNavbar from "./TransNavbar";
+import ImageReveal from "./ImageReveal";
 
 function Animation2() {
     const [showNavbar, setShowNavbar] = useState(false);
@@ -82,7 +83,7 @@ function Animation2() {
 
             <TextReveal delay={0.3}>
                 <div className="ml-[30px] mr-[30px]">
-                    <div className={'absolute top-[90px] left-[201px] flex flex-col gap-[42px]'}>
+                    <div className={'absolute top-[170px] z-[1] left-[201px] flex flex-col gap-[42px]'}>
                         <div className={'montserrat-thick ani2-title'}>
                             <p>Meet Rizta</p>
                         </div>
@@ -117,7 +118,8 @@ function Animation2() {
                             </div>
                         </div>
                     </div>
-                    <img className="rounded-[35px]" src={rizta} alt="Rizta"/>
+                    <ImageReveal imgSrc={rizta}/>
+                    {/*<img className="rounded-[35px]" src={rizta} alt="Rizta"/>*/}
                 </div>
             </TextReveal>
 
@@ -144,7 +146,7 @@ function Animation2() {
                     </TextReveal>
                 </div>
                 <div className={'video-cont-ani'}>
-                    <div className={'absolute top-[3675px] z-[5] left-[201px] flex flex-col gap-[42px]'}>
+                    <div className={'absolute top-[3850px] z-[5] left-[201px] flex flex-col gap-[42px]'}>
                         <TextReveal delay={0.2}>
                             <div className="slide-bottom-ani2 poppins-regular">
 
@@ -186,7 +188,7 @@ function Animation2() {
                 </div>
                 <div className="ml-[45px] mt-[30px] mr-[45px]">
 
-                    <div className={'absolute top-[4230px] left-[201px] flex flex-col gap-[42px]'}>
+                    <div className={'absolute top-[4400px] left-[201px] flex flex-col gap-[42px]'}>
                         <TextReveal delay={0.1}>
                             <div className={'montserrat-thick ani2-title'}>
                                 <p>The Bike of scooters</p>
