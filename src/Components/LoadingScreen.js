@@ -1,12 +1,12 @@
 // LoadingScreen.js
 import React from 'react';
-
+import logo from '../assets/loading_logo.png'
+import '../styles/LoadingScreen.css'
 const LoadingScreen = () => {
     return (
-        <div className="loading-screen">
-            <h1>Loading...</h1>
-            <div className="spinner"></div>
-            <p>Preparing an amazing experience for you!</p>
+        <div className="loading-screen w-screen h-screen bg-black">
+            <img className={'img-big'} src={logo}/>
+            <img className={'img-small'} src={logo}/>
         </div>
     );
 };
