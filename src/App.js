@@ -100,7 +100,7 @@ function App() {
 
                 <Cards />
             </div>
-            <Slider />
+            <Slider/>
             <div className={''}>
                 <Overlay2 />
             </div>

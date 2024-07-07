@@ -36,8 +36,8 @@ const ImageSection = ({ imgSrc="https://images.unsplash.com/photo-1719861032503-
             visibility: 'visible',
         });
 
-        const overlay = image.querySelector('.img-overlay');
-        const img = image.querySelector('img');
+        const overlay = image.querySelector('.image-reveal-overlay');
+        const img = image.querySelector('.image-reveal-img');
 
         const masterTL = gsap.timeline({ paused: true });
         masterTL.add(removeOverlay(overlay)).add(scaleInImage(img), '-=1.4');
@@ -64,10 +64,10 @@ const ImageSection = ({ imgSrc="https://images.unsplash.com/photo-1719861032503-
     }, []);
 
     return (
-        <section>
-            <div className="img-container" ref={imgContainerRef}>
-                <div className="img-overlay"></div>
-                <img src={imgSrc} alt="" />
+        <section className="image-reveal-section">
+            <div className="image-reveal-container" ref={imgContainerRef}>
+                <div className="image-reveal-overlay"></div>
+                <img className="image-reveal-img" src={imgSrc} alt="" />
             </div>
         </section>
     );
