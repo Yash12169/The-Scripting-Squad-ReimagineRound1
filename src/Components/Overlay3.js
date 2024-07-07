@@ -60,7 +60,7 @@ function Overlay3() {
             // Fade out the new mask over 2 seconds
             tl.to(newMask, {
                 opacity: 0,
-                duration: 2,
+                duration: 3,
                 onComplete: () => {
                     gsap.set(newMask, { display: 'none' });
                 }
@@ -124,7 +124,7 @@ function Overlay3() {
                     setShowPercentage(false);
                 }, 50);
             }
-        }, 30);
+        }, 50);
 
         return () => clearInterval(interval);
     }, []);
